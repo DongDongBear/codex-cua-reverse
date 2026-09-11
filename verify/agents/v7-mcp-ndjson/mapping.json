@@ -1,0 +1,139 @@
+{
+  "note": "MCP snake_case tools are the plugin/CLI surface. Unified-computer-use REPL uses tinysky `cua.*` → `@oai/sky` snake_case → MacComputerUseClient camelCase → ComputerUseIPC* on CodexComputerUseIPC-5.",
+  "live_mcp_tools_expected": [
+    "list_apps",
+    "get_app_state",
+    "click",
+    "perform_secondary_action",
+    "set_value",
+    "select_text",
+    "scroll",
+    "drag",
+    "press_key",
+    "type_text"
+  ],
+  "rows": [
+    {
+      "mcp": "list_apps",
+      "tinysky": "cua.listApps()",
+      "sky": "sky.list_apps()",
+      "macClient": "MacComputerUseClient.listApps()",
+      "ipc": "ComputerUseIPCListAppsRequest",
+      "ipcResult": "ComputerUseIPCDiscoveredApp[]",
+      "mutating": false
+    },
+    {
+      "mcp": "get_app_state",
+      "tinysky": "cua.getApp(name)  // internally sky.get_app_state({app, disableDiff:true}); App.getAXState/getScreenshot/getAXStateAndScreenshot also call get_app_state",
+      "sky": "sky.get_app_state({ app, disableDiff? })  // implicit session start",
+      "macClient": "startApp + getAppState",
+      "ipc": "ComputerUseIPCAppStartRequest then ComputerUseIPCAppGetSkyshotRequest",
+      "ipcResult": "ComputerUseIPCAppState / ComputerUseIPCSkyshot (AX text + screenshot URL)",
+      "mutating": false,
+      "mcpArg": {
+        "app": "string (required)"
+      }
+    },
+    {
+      "mcp": "click",
+      "tinysky": "app.click(index | [x,y], {mouseButton, clickCount})",
+      "sky": "sky.click({ app, element_index|x,y, mouse_button, click_count })",
+      "macClient": "click → performAction",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { click: { at: elementID|coordinate, clickCount, mouseButton } } }",
+      "mutating": true
+    },
+    {
+      "mcp": "perform_secondary_action",
+      "tinysky": "app.performSecondaryAction(index, action)",
+      "sky": "sky.perform_secondary_action({ app, element_index, action })",
+      "macClient": "performSecondaryAction",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { performSecondaryAction: { action, elementID } } }",
+      "mutating": true
+    },
+    {
+      "mcp": "set_value",
+      "tinysky": "app.setValue(index, value)",
+      "sky": "sky.set_value({ app, element_index, value })",
+      "macClient": "setValue",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { setValue } }",
+      "mutating": true
+    },
+    {
+      "mcp": "select_text",
+      "tinysky": "app.selectText(index, text, {prefix,suffix,selectionType})",
+      "sky": "sky.select_text({ app, element_index, text, prefix, suffix, selection_type })",
+      "macClient": "selectText",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { selectText } }",
+      "mutating": true
+    },
+    {
+      "mcp": "scroll",
+      "tinysky": "app.scroll(index | [x,y], direction, pages?)",
+      "sky": "sky.scroll({ app, element_index|x,y, direction, pages })",
+      "macClient": "scroll",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { scroll } }",
+      "mutating": true
+    },
+    {
+      "mcp": "drag",
+      "tinysky": "app.drag([x1,y1],[x2,y2])",
+      "sky": "sky.drag({ app, from_x, from_y, to_x, to_y })",
+      "macClient": "drag",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { drag } }",
+      "mutating": true
+    },
+    {
+      "mcp": "press_key",
+      "tinysky": "app.pressKey(key)",
+      "sky": "sky.press_key({ app, key })",
+      "macClient": "pressKey",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { pressKey: { _0: key } } }",
+      "mutating": true
+    },
+    {
+      "mcp": "type_text",
+      "tinysky": "app.typeText(text)",
+      "sky": "sky.type_text({ app, text })",
+      "macClient": "typeText",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { type: { _0: text } } }",
+      "mutating": true
+    }
+  ],
+  "present_in_sky_tinysky_absent_from_mcp": [
+    {
+      "tinysky": "app.paste(text, {format})",
+      "sky": "sky.paste({ app, text, format })",
+      "ipc": "ComputerUseIPCAppPerformActionRequest { action: { paste } }"
+    },
+    {
+      "tinysky": null,
+      "sky": "sky.start_audio_recording / stop_audio_recording (SKY_ENABLE_AUDIO=1)",
+      "ipc": "ComputerUseIPCStartAudioRecordingRequest / ComputerUseIPCStopAudioRecordingRequest"
+    }
+  ],
+  "senderAuthorization": {
+    "type": "ComputerUseIPCSenderAuthorization",
+    "failClosed": "Sender process is not authenticated",
+    "jsonRpcCode": -10000,
+    "jsonRpcName": "senderProcessNotAuthenticated",
+    "analyticsFields": [
+      "parent/responsible team id",
+      "signing id",
+      "bundle id",
+      "executable"
+    ],
+    "failureReasons": [
+      "CODEX_COMPUTER_USE_IPC_AUTHORIZATION_FAILURE_REASON_MISSING_PARENT",
+      "CODEX_COMPUTER_USE_IPC_AUTHORIZATION_FAILURE_REASON_UNTRUSTED_PARENT",
+      "CODEX_COMPUTER_USE_IPC_AUTHORIZATION_FAILURE_REASON_RELAY_WITHOUT_TRUSTED_ANCESTOR"
+    ],
+    "validLivePaths": [
+      "node_repl.nativePipe.createConnection (host-side privileged bridge; NativePipeRequestOp::Connect)",
+      "signed SkyComputerUseClient mcp (com.openai.sky.CUAService.cli) launched under a trusted 2DC432GLL2 parent"
+    ],
+    "invalidLivePaths": [
+      "unsigned / Node.js Foundation node connecting to computeruse.sock",
+      "OpenAI-signed cua_node/bin/node (Identifier=node, Team=2DC432GLL2) connecting to computeruse.sock"
+    ]
+  }
+}

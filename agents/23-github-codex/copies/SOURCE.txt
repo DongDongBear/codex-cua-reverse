@@ -1,0 +1,7 @@
+repo: https://github.com/openai/codex
+ref: 968835997714baaff199cfed5f89a2c65d8ca77d
+date: 2026-09-10T10:38:10Z
+message: Bound MCP descriptions separately from Guardian action JSON (#44493)
+method: gh api repos/openai/codex/contents/<path>?ref=<sha>  Accept: application/vnd.github.raw
+tree: gh api repos/openai/codex/git/trees/<sha>?recursive=1
+no secrets included

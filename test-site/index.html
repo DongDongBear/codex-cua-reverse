@@ -1,0 +1,57 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>CUA regression lab</title>
+<style>
+  body { font-family: ui-sans-serif, system-ui; margin: 24px; max-width: 720px; }
+  h1 { font-size: 28px; }
+  label { display: block; margin: 12px 0 4px; }
+  input, textarea, button, select { font-size: 16px; padding: 8px; }
+  #log { white-space: pre-wrap; background: #111; color: #9f9; padding: 12px; min-height: 80px; }
+  #scrollbox { height: 160px; overflow: auto; border: 1px solid #ccc; padding: 8px; }
+  #drag { width: 80px; height: 80px; background: #4f46e5; color: #fff; display: flex; align-items: center; justify-content: center; }
+  #drop { width: 200px; height: 80px; border: 2px dashed #888; margin-top: 8px; }
+</style>
+<h1 id="title">CUA regression lab</h1>
+<p id="hint">给 ChatGPT IAB 点的本地页。每个控件都有稳定 id。</p>
+
+<label for="name">Name</label>
+<input id="name" data-testid="name" />
+
+<label for="bio">Bio</label>
+<textarea id="bio" data-testid="bio" rows="3"></textarea>
+
+<label for="role">Role</label>
+<select id="role" data-testid="role">
+  <option>none</option>
+  <option>agent</option>
+  <option>human</option>
+</select>
+
+<p>
+  <button id="btn-ok" data-testid="ok">OK</button>
+  <button id="btn-alert" data-testid="alert">Alert</button>
+  <button id="btn-confirm" data-testid="confirm">Confirm</button>
+  <a id="more" href="/more.html">more page</a>
+</p>
+
+<label>file</label>
+<input id="file" type="file" />
+
+<div id="scrollbox">
+  <p>scroll-1</p><p>scroll-2</p><p>scroll-3</p><p>scroll-4</p>
+  <p>scroll-5</p><p>scroll-6</p><p>scroll-7</p><p>scroll-8</p>
+</div>
+
+<div id="drag" draggable="true">drag me</div>
+<div id="drop">drop here</div>
+
+<pre id="log">ready</pre>
+<script>
+const log = (m) => { document.getElementById("log").textContent += "\n" + m; };
+document.getElementById("btn-ok").onclick = () => log("ok:" + document.getElementById("name").value);
+document.getElementById("btn-alert").onclick = () => { alert("cua-alert"); log("alert"); };
+document.getElementById("btn-confirm").onclick = () => { log("confirm:" + confirm("ok?")); };
+document.getElementById("name").addEventListener("input", (e) => log("name=" + e.target.value));
+document.getElementById("drop").addEventListener("dragover", (e) => e.preventDefault());
+document.getElementById("drop").addEventListener("drop", (e) => { e.preventDefault(); log("dropped"); });
+</script>

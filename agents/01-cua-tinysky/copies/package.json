@@ -1,0 +1,29 @@
+{
+  "name": "@oai/cua",
+  "version": "0.2.4",
+  "author": "noahj",
+  "private": false,
+  "type": "module",
+  "main": "dist/lib/js/oai_js_cua/src/index.js",
+  "exports": {
+    ".": "./dist/lib/js/oai_js_cua/src/index.js",
+    "./tinyskyAlt": "./dist/lib/js/oai_js_cua/src/tinysky_alt/globals.js"
+  },
+  "bin": {
+    "sky_linux_arm64": "./bin/linux/sky_linux_arm64",
+    "sky_linux_x64": "./bin/linux/sky_linux_x64"
+  },
+  "files": [
+    "dist/**/*",
+    "docs/**/*",
+    "bin/**/*",
+    "dist/**/*"
+  ],
+  "dependencies": {},
+  "types": "dist/lib/js/oai_js_cua/src/index.d.ts",
+  "scripts": {
+    "format": "oai-prettier --check --cache --ignore-path .gitignore --ignore-path .prettierignore '**/*.{cjs,mjs,js,jsx,ts,tsx,json,css,scss,md}'",
+    "test": "bun test src",
+    "types": "tsc"
+  }
+}

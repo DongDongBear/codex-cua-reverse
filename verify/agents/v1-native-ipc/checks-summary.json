@@ -1,0 +1,126 @@
+{
+  "agent": "v1-native-ipc",
+  "ts": "2026-09-10T11:07:00Z",
+  "overall": "FAIL",
+  "overall_reason": "computeruse.sock is live and both callers agree on uint32le JSON-RPC frames, but every JSON-RPC request from this agent is fail-closed with EOF and no JSON-RPC body. Did not observe serverApiVersion, list_apps apps[], Finder skyshot, -10013, or -10000.",
+  "service": {
+    "pid": 3802,
+    "ppid": 3579,
+    "exe": "/Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService",
+    "bundle_id": "com.openai.sky.CUAService",
+    "team": "2DC432GLL2"
+  },
+  "sock": {
+    "path": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+    "exists": true,
+    "mode": "0o140600",
+    "uid": 501,
+    "gid": 20,
+    "listener": "SkyComputerUseService pid 3802 fd 8"
+  },
+  "checks": [
+    {
+      "id": "sock_listen",
+      "result": "PASS",
+      "error_code": null,
+      "response_keys": ["path", "mode", "pid"],
+      "detail": "unix socket srw------- exists; lsof shows SkyComput 3802 LISTEN-equivalent fd 8"
+    },
+    {
+      "id": "connect",
+      "result": "PASS",
+      "error_code": null,
+      "response_keys": ["connect_ms", "recv"],
+      "detail": "connect() succeeds in <3ms from python, fnm node, and OpenAI-signed cua_node"
+    },
+    {
+      "id": "frame_agreement",
+      "result": "PASS",
+      "error_code": null,
+      "response_keys": ["frame_len", "body_len", "sha256_prefix", "prefix_u32le", "hex_head"],
+      "detail": "independent-caller.py and independent-caller.mjs identical fixtures; ping_v5 frame_len=98 body_len=94 prefix_u32le=94 hex_head=5e0000007b226a736f6e727063223a22322e30222c226964 sha256_prefix=730ec1b6a3e42f2f"
+    },
+    {
+      "id": "ping_v5",
+      "result": "FAIL",
+      "error_code": null,
+      "rpc": null,
+      "response_keys": [],
+      "error": "socket closed",
+      "detail": "wrote ping {clientApiVersion: CodexComputerUseIPC-5}; recv 0 bytes then EOF in ~4-30ms. No jsonrpc/result/error. No serverApiVersion."
+    },
+    {
+      "id": "list_apps",
+      "result": "FAIL",
+      "error_code": null,
+      "rpc": null,
+      "response_keys": [],
+      "error": "socket closed",
+      "requestType": "ComputerUseIPCListAppsRequest",
+      "detail": "same EOF; no apps array"
+    },
+    {
+      "id": "get_app_state_finder",
+      "result": "FAIL",
+      "error_code": null,
+      "rpc": null,
+      "response_keys": [],
+      "error": "socket closed",
+      "requestType": "ComputerUseIPCAppGetSkyshotRequest",
+      "detail": "request {app: Finder, disableDiff: true}; same EOF; no skyshot/text/screenshot"
+    },
+    {
+      "id": "adversarial_wrong_version",
+      "result": "FAIL",
+      "error_code": null,
+      "rpc": null,
+      "response_keys": [],
+      "error": "socket closed",
+      "expected": "incompatibleClientVersion / -10013",
+      "detail": "CodexComputerUseIPC-0 ping is closed identically to v5. Cannot distinguish version rejection. Harness native-ipc.mjs marked this PASS because it treated any throw as rejected=true; that is a false positive."
+    },
+    {
+      "id": "senderProcessNotAuthenticated",
+      "result": "FAIL",
+      "error_code": null,
+      "rpc": null,
+      "response_keys": [],
+      "expected": "senderProcessNotAuthenticated / -10000",
+      "detail": "Unauthenticated peers never receive a JSON-RPC error object. Service closes on accept (connect-only, no payload, also EOF in ~7ms). Team-signed cua_node (2DC432GLL2, identifier=node, parent=zsh) is closed the same way as Node.js Foundation fnm node."
+    },
+    {
+      "id": "signed_mcp_initialize",
+      "result": "PASS",
+      "error_code": null,
+      "response_keys": ["id", "jsonrpc", "result"],
+      "result_keys": ["capabilities", "protocolVersion", "serverInfo"],
+      "detail": "SkyComputerUseClient mcp NDJSON initialize -> protocolVersion 2024-11-05, serverInfo.name=Computer Use"
+    },
+    {
+      "id": "signed_mcp_tools_list",
+      "result": "PASS",
+      "error_code": null,
+      "response_keys": ["id", "jsonrpc", "result"],
+      "result_keys": ["tools"],
+      "detail": "10 tools: list_apps, get_app_state, click, perform_secondary_action, set_value, select_text, scroll, drag, press_key, type_text. Did not invoke mutating tools."
+    },
+    {
+      "id": "signed_mcp_list_apps",
+      "result": "FAIL",
+      "error_code": null,
+      "rpc": null,
+      "response_keys": [],
+      "error": "timeout 25021ms, pending=[]",
+      "detail": "Client blocked in mach_msg (XPC). Did not open computeruse.sock. No JSON-RPC error returned to MCP."
+    },
+    {
+      "id": "signed_mcp_get_app_state_finder",
+      "result": "FAIL",
+      "error_code": null,
+      "rpc": null,
+      "response_keys": [],
+      "error": "timeout 25008ms, pending=[]",
+      "detail": "Same XPC hang. Not the unix JSON-RPC pipe."
+    }
+  ]
+}

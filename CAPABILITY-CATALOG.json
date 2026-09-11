@@ -1,0 +1,1814 @@
+{
+  "source_raw": "/Users/dongdong/Desktop/codex拦截-两轮-raw.json",
+  "tasks": [
+    {
+      "id": "task-1-ant-design-form",
+      "session": "0127_WS_backend-api_codex_responses",
+      "model": "gpt-6-astra",
+      "frames": 1265,
+      "user": "我在右侧的浏览器打开了 ant design 的 form 页面，请你帮我测试一下这些组件的可用性（输入字符 按一下 submit 这些） 请你开始"
+    },
+    {
+      "id": "task-2-linear-issue",
+      "session": "0223_WS_backend-api_codex_responses",
+      "model": "gpt-6-astra",
+      "frames": 1624,
+      "user": "请你帮我打开，全权由你控制"
+    }
+  ],
+  "tools_in_raw": [
+    [
+      "js",
+      37
+    ],
+    [
+      "request_user_input_async",
+      1
+    ],
+    [
+      "js_reset",
+      1
+    ]
+  ],
+  "trace_apis": [
+    {
+      "name": "app.click",
+      "count": 14
+    },
+    {
+      "name": "tab.getAXState",
+      "count": 12
+    },
+    {
+      "name": "tab.click",
+      "count": 11
+    },
+    {
+      "name": "nodeRepl.write",
+      "count": 10
+    },
+    {
+      "name": "app.getAXState",
+      "count": 9
+    },
+    {
+      "name": "app.getAXStateAndScreenshot",
+      "count": 8
+    },
+    {
+      "name": "tab.playwright.locator",
+      "count": 7
+    },
+    {
+      "name": "cua.getApp",
+      "count": 4
+    },
+    {
+      "name": "app.pressKey",
+      "count": 3
+    },
+    {
+      "name": "browser.browserId",
+      "count": 2
+    },
+    {
+      "name": "tab.typeText",
+      "count": 2
+    },
+    {
+      "name": "app.performSecondaryAction",
+      "count": 2
+    },
+    {
+      "name": "app.typeText",
+      "count": 2
+    },
+    {
+      "name": "app.setValue",
+      "count": 2
+    },
+    {
+      "name": "cua.getBrowser",
+      "count": 1
+    },
+    {
+      "name": "cua.listTabs",
+      "count": 1
+    },
+    {
+      "name": "cua.getTab",
+      "count": 1
+    },
+    {
+      "name": "browser.tabs.get",
+      "count": 1
+    },
+    {
+      "name": "tab.dev.logs",
+      "count": 1
+    },
+    {
+      "name": "app.getScreenshot",
+      "count": 1
+    },
+    {
+      "name": "cua.listApps",
+      "count": 1
+    },
+    {
+      "name": "app.paste",
+      "count": 1
+    }
+  ],
+  "js_call_count": 39,
+  "tinysky": [
+    {
+      "id": "cua.getState",
+      "in_traces": false
+    },
+    {
+      "id": "cua.getBrowser",
+      "in_traces": true
+    },
+    {
+      "id": "cua.createBrowserTab",
+      "in_traces": false
+    },
+    {
+      "id": "cua.getTab",
+      "in_traces": true
+    },
+    {
+      "id": "cua.listBrowsers",
+      "in_traces": false
+    },
+    {
+      "id": "cua.listTabs",
+      "in_traces": true
+    },
+    {
+      "id": "cua.getApp",
+      "in_traces": true
+    },
+    {
+      "id": "cua.listApps",
+      "in_traces": true
+    },
+    {
+      "id": "target.getAXState",
+      "in_traces": true
+    },
+    {
+      "id": "target.getScreenshot",
+      "in_traces": true
+    },
+    {
+      "id": "target.getAXStateAndScreenshot",
+      "in_traces": true
+    },
+    {
+      "id": "target.click",
+      "in_traces": true
+    },
+    {
+      "id": "target.typeText",
+      "in_traces": true
+    },
+    {
+      "id": "target.setValue",
+      "in_traces": true
+    },
+    {
+      "id": "target.pressKey",
+      "in_traces": true
+    },
+    {
+      "id": "target.scroll",
+      "in_traces": false
+    },
+    {
+      "id": "target.drag",
+      "in_traces": false
+    },
+    {
+      "id": "target.paste",
+      "in_traces": true
+    },
+    {
+      "id": "target.selectText",
+      "in_traces": false
+    },
+    {
+      "id": "target.performSecondaryAction",
+      "in_traces": true
+    },
+    {
+      "id": "tab.goto",
+      "in_traces": false
+    },
+    {
+      "id": "tab.back",
+      "in_traces": false
+    },
+    {
+      "id": "tab.forward",
+      "in_traces": false
+    },
+    {
+      "id": "tab.reload",
+      "in_traces": false
+    },
+    {
+      "id": "tab.close",
+      "in_traces": false
+    },
+    {
+      "id": "tab.markDeliverable",
+      "in_traces": false
+    },
+    {
+      "id": "tab.markHandoff",
+      "in_traces": false
+    }
+  ],
+  "sky": [
+    {
+      "id": "sky.list_apps",
+      "in_traces": false
+    },
+    {
+      "id": "sky.get_app_state",
+      "in_traces": false
+    },
+    {
+      "id": "sky.click",
+      "in_traces": false
+    },
+    {
+      "id": "sky.drag",
+      "in_traces": false
+    },
+    {
+      "id": "sky.paste",
+      "in_traces": false
+    },
+    {
+      "id": "sky.perform_secondary_action",
+      "in_traces": false
+    },
+    {
+      "id": "sky.press_key",
+      "in_traces": false
+    },
+    {
+      "id": "sky.scroll",
+      "in_traces": false
+    },
+    {
+      "id": "sky.select_text",
+      "in_traces": false
+    },
+    {
+      "id": "sky.set_value",
+      "in_traces": false
+    },
+    {
+      "id": "sky.type_text",
+      "in_traces": false
+    },
+    {
+      "id": "sky.start_audio_recording",
+      "in_traces": false
+    },
+    {
+      "id": "sky.stop_audio_recording",
+      "in_traces": false
+    }
+  ],
+  "repl": [
+    {
+      "id": "js",
+      "in_traces": true
+    },
+    {
+      "id": "js_reset",
+      "in_traces": true
+    },
+    {
+      "id": "turn_ended",
+      "in_traces": false
+    },
+    {
+      "id": "js_add_node_module_dir",
+      "in_traces": false
+    },
+    {
+      "id": "nodeRepl.write",
+      "in_traces": true
+    },
+    {
+      "id": "nodeRepl.emitImage",
+      "in_traces": false
+    },
+    {
+      "id": "nodeRepl.emitAudio",
+      "in_traces": false
+    },
+    {
+      "id": "nodeRepl.createElicitation",
+      "in_traces": false
+    }
+  ],
+  "browser_desktop": [
+    {
+      "id": "Agent.browsers",
+      "layer": "browser-desktop",
+      "iface": "Agent",
+      "member": "browsers",
+      "signature": "browsers: Browsers; // API for finding and selecting browsers.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Agent.documentation",
+      "layer": "browser-desktop",
+      "iface": "Agent",
+      "member": "documentation",
+      "signature": "documentation: Documentation; // API for reading packaged browser-use documentation by name.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Browsers.get",
+      "layer": "browser-desktop",
+      "iface": "Browsers",
+      "member": "get",
+      "signature": "get(id: string): Promise<Browser>; // Get a browser by id or client type.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "Browsers.getDefault",
+      "layer": "browser-desktop",
+      "iface": "Browsers",
+      "member": "getDefault",
+      "signature": "getDefault(): Promise<Browser>; // Get the default browser from those currently available.",
+      "unsupportedByDefaultIn": null,
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "Browsers.getForUrl",
+      "layer": "browser-desktop",
+      "iface": "Browsers",
+      "member": "getForUrl",
+      "signature": "getForUrl(url: string): Promise<Browser>; // Get the browser best suited to interact with the provided URL.",
+      "unsupportedByDefaultIn": null,
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "Browsers.list",
+      "layer": "browser-desktop",
+      "iface": "Browsers",
+      "member": "list",
+      "signature": "list(): Promise<Array<{ family?: string; id: string; metadata?: { codexSessionId?: string; extensionInstanceId?: string }; name: string; profileName?: string; type: \"iab\" | \"extension\" | \"cdp\" }>>; // List available browsers.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Browser.browserId",
+      "layer": "browser-desktop",
+      "iface": "Browser",
+      "member": "browserId",
+      "signature": "browserId: string; // Browser id selected by `agent.browsers.get()`.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "Browser.capabilities",
+      "layer": "browser-desktop",
+      "iface": "Browser",
+      "member": "capabilities",
+      "signature": "capabilities: BrowserCapabilityCollection; // Browser-scoped optional capabilities advertised by the connected backend; discover IDs with `await browser.capabilities.list()`, then call `await (await browser.capabilities.get(id)).documentation()` for method details.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Browser.tabs",
+      "layer": "browser-desktop",
+      "iface": "Browser",
+      "member": "tabs",
+      "signature": "tabs: Tabs; // API for interacting with browser tabs.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Browser.user",
+      "layer": "browser-desktop",
+      "iface": "Browser",
+      "member": "user",
+      "signature": "user: BrowserUser; // Context for user-owned browser tabs.",
+      "unsupportedByDefaultIn": [
+        "iab",
+        "cdp"
+      ],
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Browser.documentation",
+      "layer": "browser-desktop",
+      "iface": "Browser",
+      "member": "documentation",
+      "signature": "documentation(): Promise<string>; // Read browser guidance and the core API reference.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Browser.history",
+      "layer": "browser-desktop",
+      "iface": "Browser",
+      "member": "history",
+      "signature": "history(options: BrowserHistoryOptions): Promise<Array<BrowserHistoryEntry>>; // List recent browsing history ordered by `dateVisited` descending.",
+      "unsupportedByDefaultIn": [
+        "iab",
+        "cdp"
+      ],
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Browser.nameSession",
+      "layer": "browser-desktop",
+      "iface": "Browser",
+      "member": "nameSession",
+      "signature": "nameSession(name: string): Promise<void>; // Name the current browser automation session.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "BrowserUser.claimTab",
+      "layer": "browser-desktop",
+      "iface": "BrowserUser",
+      "member": "claimTab",
+      "signature": "claimTab(tab: string | BrowserUserTabInfo): Promise<Tab>; // Claim a user tab returned by `openTabs()` and return it as a controllable agent tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "BrowserUser.getTabContext",
+      "layer": "browser-desktop",
+      "iface": "BrowserUser",
+      "member": "getTabContext",
+      "signature": "getTabContext(tab: string | BrowserUserTabInfo): Promise<BrowserUserTabContext>; // Read bounded page context from an open user tab without claiming it.",
+      "unsupportedByDefaultIn": [
+        "extension",
+        "iab",
+        "cdp"
+      ],
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "BrowserUser.openTabs",
+      "layer": "browser-desktop",
+      "iface": "BrowserUser",
+      "member": "openTabs",
+      "signature": "openTabs(): Promise<Array<BrowserUserTabInfo>>; // List open top-level tabs across the user's browser windows ordered by `lastOpened` descending.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tabs.content",
+      "layer": "browser-desktop",
+      "iface": "Tabs",
+      "member": "content",
+      "signature": "content(options: TabsContentOptions): Promise<Array<TabsContentResult>>; // Load one or more URLs in temporary background tabs and extract their content without changing the selected tab.",
+      "unsupportedByDefaultIn": [
+        "iab",
+        "extension",
+        "cdp"
+      ],
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tabs.get",
+      "layer": "browser-desktop",
+      "iface": "Tabs",
+      "member": "get",
+      "signature": "get(id: string): Promise<Tab>; // Get a tab by id.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "Tabs.list",
+      "layer": "browser-desktop",
+      "iface": "Tabs",
+      "member": "list",
+      "signature": "list(): Promise<Array<TabInfo>>; // List open tabs in the browser.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tabs.new",
+      "layer": "browser-desktop",
+      "iface": "Tabs",
+      "member": "new",
+      "signature": "new(): Promise<Tab>; // Create and return a new tab in the browser.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tabs.selected",
+      "layer": "browser-desktop",
+      "iface": "Tabs",
+      "member": "selected",
+      "signature": "selected(): Promise<undefined | Tab>; // Return the currently selected tab, if any.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.ax",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "ax",
+      "signature": "ax: AXAPI; // API for interacting with accessibility state and accessibility elements.",
+      "unsupportedByDefaultIn": [
+        "iab",
+        "extension",
+        "cdp"
+      ],
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.capabilities",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "capabilities",
+      "signature": "capabilities: TabCapabilityCollection; // Tab-scoped optional capabilities advertised by the connected backend; discover IDs with `await tab.capabilities.list()`, then call `await (await tab.capabilities.get(id)).documentation()` for method details.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.clipboard",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "clipboard",
+      "signature": "clipboard: TabClipboardAPI; // API for interacting with the browser session's clipboard.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.content",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "content",
+      "signature": "content: ContentAPI; // API for exporting tab content.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.cua",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "cua",
+      "signature": "cua: CUAAPI; // API for interacting with the tab via the cua api",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.dev",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "dev",
+      "signature": "dev: TabDevAPI; // API for developer-oriented tab inspection.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.dom_cua",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "dom_cua",
+      "signature": "dom_cua: DomCUAAPI; // API for interacting with the tab via the dom based cua api",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.id",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "id",
+      "signature": "id: string; // A tab's unique identifier",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.playwright",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "playwright",
+      "signature": "playwright: PlaywrightAPI; // API for interacting with the tab via the playwright api",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.back",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "back",
+      "signature": "back(): Promise<void>; // Navigate this tab back in history.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.close",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "close",
+      "signature": "close(): Promise<void>; // Close this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.forward",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "forward",
+      "signature": "forward(): Promise<void>; // Navigate this tab forward in history.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.getJsDialog",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "getJsDialog",
+      "signature": "getJsDialog(): Promise<undefined | Dialog>; // Get the active JavaScript dialog for this tab, if one is currently open.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.goto",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "goto",
+      "signature": "goto(url: string): Promise<void>; // Open a URL in this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.markDeliverable",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "markDeliverable",
+      "signature": "markDeliverable(): Promise<void>; // Keep this tab as a deliverable after the turn completes.",
+      "unsupportedByDefaultIn": [
+        "cdp"
+      ],
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.markHandoff",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "markHandoff",
+      "signature": "markHandoff(): Promise<void>; // Keep this tab available for a later turn after the current turn completes.",
+      "unsupportedByDefaultIn": [
+        "cdp"
+      ],
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.reload",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "reload",
+      "signature": "reload(): Promise<void>; // Reload this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.requestManualHandoff",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "requestManualHandoff",
+      "signature": "requestManualHandoff(): Promise<void>; // Request manual user control of this Cloud Browser tab.",
+      "unsupportedByDefaultIn": [
+        "extension",
+        "iab",
+        "cdp"
+      ],
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.screenshot",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "screenshot",
+      "signature": "screenshot(options: ScreenshotOptions): Promise<Uint8Array>; // Capture a screenshot of this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.title",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "title",
+      "signature": "title(): Promise<undefined | string>; // Get the current title for this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Tab.url",
+      "layer": "browser-desktop",
+      "iface": "Tab",
+      "member": "url",
+      "signature": "url(): Promise<undefined | string>; // Get the current URL for this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "AXAPI.click",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "click",
+      "signature": "click(target: number | AXPoint, options?: AXClickOptions): Promise<void>; // Click an accessibility element or viewport coordinate.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "AXAPI.drag",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "drag",
+      "signature": "drag(from: AXPoint, to: AXPoint): Promise<void>; // Drag between two viewport coordinates.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "AXAPI.get",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "get",
+      "signature": "get(mode?: \"state\", options?: AXStateOptions): Promise<string>; // Return accessibility state without displaying it; prefer write() for model-visible observation.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "AXAPI.performSecondaryAction",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "performSecondaryAction",
+      "signature": "performSecondaryAction(elementIndex: number, action: string): Promise<void>; // Invoke an additional action exposed by an accessibility element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "AXAPI.pressKey",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "pressKey",
+      "signature": "pressKey(key: string): Promise<void>; // Press a key or key combination in the current tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "AXAPI.scroll",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "scroll",
+      "signature": "scroll(target: number | AXPoint, direction: AXDirection, pages?: number): Promise<void>; // Scroll an accessibility element or a viewport coordinate.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "AXAPI.selectText",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "selectText",
+      "signature": "selectText(elementIndex: number, text: string, options?: AXSelectTextOptions): Promise<void>; // Select text or position the cursor within an editable element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "AXAPI.setValue",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "setValue",
+      "signature": "setValue(elementIndex: number, value: string): Promise<void>; // Set the value of an accessibility element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "AXAPI.typeText",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "typeText",
+      "signature": "typeText(text: string): Promise<void>; // Type text into the currently focused element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "AXAPI.write",
+      "layer": "browser-desktop",
+      "iface": "AXAPI",
+      "member": "write",
+      "signature": "write(mode?: \"state\", options?: AXStateOptions): Promise<void>; // Prefer this method to display current accessibility state to the model.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "ContentAPI.export",
+      "layer": "browser-desktop",
+      "iface": "ContentAPI",
+      "member": "export",
+      "signature": "export(): Promise<string>; // Export the tab's content to a file on disk using the default asset-loader path.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "ContentAPI.exportGsuite",
+      "layer": "browser-desktop",
+      "iface": "ContentAPI",
+      "member": "exportGsuite",
+      "signature": "exportGsuite(type: \"pdf\" | \"md\" | \"xlsx\" | \"csv\" | \"docx\" | \"pptx\"): Promise<string>; // Export a Google Workspace tab using an explicit GSuite export type.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "ContentAPI.exportYouTubeTranscript",
+      "layer": "browser-desktop",
+      "iface": "ContentAPI",
+      "member": "exportYouTubeTranscript",
+      "signature": "exportYouTubeTranscript(): Promise<string>; // Export an HTTPS youtube.com or www.youtube.com /watch transcript to a UTF-8 .txt file.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.click",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "click",
+      "signature": "click(options: ClickOptions): Promise<void>; // Click at a coordinate in the current viewport.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.double_click",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "double_click",
+      "signature": "double_click(options: DoubleClickOptions): Promise<void>; // Double click at a coordinate in the current viewport.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.downloadMedia",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "downloadMedia",
+      "signature": "downloadMedia(options: CuaDownloadMediaOptions): Promise<void>; // Trigger a media download at a viewport coordinate.",
+      "unsupportedByDefaultIn": [
+        "iab"
+      ],
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.drag",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "drag",
+      "signature": "drag(options: DragOptions): Promise<void>; // Drag from a point to a point by the provided path.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.keypress",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "keypress",
+      "signature": "keypress(options: KeypressOptions): Promise<void>; // Press control characters at the current focused element (focus it first via click/dblclick).",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.move",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "move",
+      "signature": "move(options: MoveOptions): Promise<void>; // Move the mouse to a point by the provided x and y coordinates.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.scroll",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "scroll",
+      "signature": "scroll(options: ScrollOptions): Promise<void>; // Scroll by a delta from a specific viewport coordinate.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "CUAAPI.type",
+      "layer": "browser-desktop",
+      "iface": "CUAAPI",
+      "member": "type",
+      "signature": "type(options: TypeOptions): Promise<void>; // Type text at the current focus.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "DomCUAAPI.click",
+      "layer": "browser-desktop",
+      "iface": "DomCUAAPI",
+      "member": "click",
+      "signature": "click(options: DomClickOptions): Promise<void>; // Click a DOM node by its id from the visible DOM snapshot.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "DomCUAAPI.double_click",
+      "layer": "browser-desktop",
+      "iface": "DomCUAAPI",
+      "member": "double_click",
+      "signature": "double_click(options: DomClickOptions): Promise<void>; // Double-click a DOM node by its id.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "DomCUAAPI.downloadMedia",
+      "layer": "browser-desktop",
+      "iface": "DomCUAAPI",
+      "member": "downloadMedia",
+      "signature": "downloadMedia(options: DomDownloadMediaOptions): Promise<void>; // Trigger a media download for a DOM node.",
+      "unsupportedByDefaultIn": [
+        "iab"
+      ],
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "DomCUAAPI.get_visible_dom",
+      "layer": "browser-desktop",
+      "iface": "DomCUAAPI",
+      "member": "get_visible_dom",
+      "signature": "get_visible_dom(): Promise<unknown>; // Return a filtered DOM with node ids for interactable elements.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "DomCUAAPI.keypress",
+      "layer": "browser-desktop",
+      "iface": "DomCUAAPI",
+      "member": "keypress",
+      "signature": "keypress(options: DomKeypressOptions): Promise<void>; // Press control characters at the currently focused element (focus it first via click/dblclick).",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "DomCUAAPI.scroll",
+      "layer": "browser-desktop",
+      "iface": "DomCUAAPI",
+      "member": "scroll",
+      "signature": "scroll(options: DomScrollOptions): Promise<void>; // Scroll either the page or a specific node (if node_id provided) by deltas.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "DomCUAAPI.type",
+      "layer": "browser-desktop",
+      "iface": "DomCUAAPI",
+      "member": "type",
+      "signature": "type(options: DomTypeOptions): Promise<void>; // Type text into the currently focused element (focus via click first).",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.domSnapshot",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "domSnapshot",
+      "signature": "domSnapshot(): Promise<string>; // Return a snapshot of the current DOM as a string, including expanded iframe body content when available.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.elementInfo",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "elementInfo",
+      "signature": "elementInfo(options: ElementInfoOptions): Promise<Array<ElementInfo>>; // Return locator-oriented metadata for elements at a screenshot coordinate.",
+      "unsupportedByDefaultIn": null,
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.elementScreenshot",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "elementScreenshot",
+      "signature": "elementScreenshot(options: ElementScreenshotOptions): Promise<Uint8Array>; // Capture a screenshot of the current viewport annotated with matching element bounds and the probed point.",
+      "unsupportedByDefaultIn": null,
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.evaluate",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "evaluate",
+      "signature": "evaluate<TResult, TArg>(pageFunction: PlaywrightEvaluateFunction<TArg, TResult>, arg?: TArg, options?: PlaywrightEvaluateOptions): Promise<TResult>; // Evaluate JavaScript in a read-only page scope.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.expectNavigation",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "expectNavigation",
+      "signature": "expectNavigation<T>(action: () => Promise<T>, options: { timeoutMs?: number; url?: string; waitUntil?: LoadState }): Promise<T>; // Expect a navigation triggered by an action.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.frameLocator",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "frameLocator",
+      "signature": "frameLocator(frameSelector: string): PlaywrightFrameLocator; // Create a frame-scoped locator builder.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.getByLabel",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "getByLabel",
+      "signature": "getByLabel(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by label text within the page.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.getByPlaceholder",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "getByPlaceholder",
+      "signature": "getByPlaceholder(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by placeholder text within the page.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.getByRole",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "getByRole",
+      "signature": "getByRole(role: string, options: { exact?: boolean; name?: TextMatcher }): PlaywrightLocator; // Find elements by ARIA role within the page.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.getByTestId",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "getByTestId",
+      "signature": "getByTestId(testId: string): PlaywrightLocator; // Find elements by test id within the page.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.getByText",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "getByText",
+      "signature": "getByText(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by text within the page.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.locator",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "locator",
+      "signature": "locator(selector: string): PlaywrightLocator; // Create a locator scoped to this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "PlaywrightAPI.waitForEvent",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "waitForEvent",
+      "signature": "waitForEvent(event: \"download\", options?: WaitForEventOptions): Promise<PlaywrightDownload>; // Wait for the next event on the page.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.waitForLoadState",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "waitForLoadState",
+      "signature": "waitForLoadState(options: PageWaitForLoadStateOptions): Promise<void>; // Wait for the page to reach a specific load state.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.waitForTimeout",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "waitForTimeout",
+      "signature": "waitForTimeout(timeoutMs: number): Promise<void>; // Wait for a fixed duration.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightAPI.waitForURL",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightAPI",
+      "member": "waitForURL",
+      "signature": "waitForURL(url: string, options: PageWaitForURLOptions): Promise<void>; // Wait for the page URL to match the provided value.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFrameLocator.frameLocator",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFrameLocator",
+      "member": "frameLocator",
+      "signature": "frameLocator(frameSelector: string): PlaywrightFrameLocator; // Create a locator scoped to a nested frame.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFrameLocator.getByLabel",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFrameLocator",
+      "member": "getByLabel",
+      "signature": "getByLabel(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by label within this frame.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFrameLocator.getByPlaceholder",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFrameLocator",
+      "member": "getByPlaceholder",
+      "signature": "getByPlaceholder(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by placeholder within this frame.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFrameLocator.getByRole",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFrameLocator",
+      "member": "getByRole",
+      "signature": "getByRole(role: string, options: { exact?: boolean; name?: TextMatcher }): PlaywrightLocator; // Find elements by ARIA role within this frame.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFrameLocator.getByTestId",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFrameLocator",
+      "member": "getByTestId",
+      "signature": "getByTestId(testId: string): PlaywrightLocator; // Find elements by test id within this frame.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFrameLocator.getByText",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFrameLocator",
+      "member": "getByText",
+      "signature": "getByText(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by text within this frame.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFrameLocator.locator",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFrameLocator",
+      "member": "locator",
+      "signature": "locator(selector: string): PlaywrightLocator; // Create a locator scoped to this frame.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.all",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "all",
+      "signature": "all(): Promise<Array<PlaywrightLocator>>; // Resolve to a list of locators for each matched element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.allTextContents",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "allTextContents",
+      "signature": "allTextContents(options: { timeoutMs?: number }): Promise<Array<string>>; // Return `textContent` for *all* elements matched by this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.and",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "and",
+      "signature": "and(locator: PlaywrightLocator): PlaywrightLocator; // Return a locator matching elements that satisfy both this locator and `locator`.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.check",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "check",
+      "signature": "check(options: LocatorCheckOptions): Promise<void>; // Check a checkbox or switch-like control.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.click",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "click",
+      "signature": "click(options: LocatorClickOptions): Promise<void>; // Click the element matched by this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "PlaywrightLocator.count",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "count",
+      "signature": "count(): Promise<number>; // Number of elements matching this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.dblclick",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "dblclick",
+      "signature": "dblclick(options: LocatorClickOptions): Promise<void>; // Double-click the element matched by this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.downloadMedia",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "downloadMedia",
+      "signature": "downloadMedia(options: LocatorDownloadMediaOptions): Promise<void>; // Trigger a download for the media or file link in the first matched element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.evaluate",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "evaluate",
+      "signature": "evaluate<TResult, TArg>(pageFunction: LocatorEvaluateFunction<TArg, TResult>, arg?: TArg, options?: PlaywrightEvaluateOptions): Promise<TResult>; // Evaluate JavaScript in a read-only scope; the locator must resolve unambiguously to one element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.evaluateAll",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "evaluateAll",
+      "signature": "evaluateAll<TResult, TArg>(pageFunction: LocatorEvaluateAllFunction<TArg, TResult>, arg?: TArg, options?: PlaywrightEvaluateOptions): Promise<TResult>; // Evaluate read-only JavaScript against all elements matched by this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.fill",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "fill",
+      "signature": "fill(value: string, options: { timeoutMs?: number }): Promise<void>; // Replace the element's value with the provided text.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.filter",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "filter",
+      "signature": "filter(options: LocatorFilterOptions): PlaywrightLocator; // Narrow this locator by additional constraints.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.first",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "first",
+      "signature": "first(): PlaywrightLocator; // Return a locator pointing at the first matched element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.getAttribute",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "getAttribute",
+      "signature": "getAttribute(name: string, options: { timeoutMs?: number }): Promise<null | string>; // Return an attribute value from the first matched element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.getByLabel",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "getByLabel",
+      "signature": "getByLabel(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by label text, scoped to this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.getByPlaceholder",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "getByPlaceholder",
+      "signature": "getByPlaceholder(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by placeholder text, scoped to this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.getByRole",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "getByRole",
+      "signature": "getByRole(role: string, options: { exact?: boolean; name?: TextMatcher }): PlaywrightLocator; // Find elements by ARIA role, scoped to this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.getByTestId",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "getByTestId",
+      "signature": "getByTestId(testId: string): PlaywrightLocator; // Find elements by test id, scoped to this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.getByText",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "getByText",
+      "signature": "getByText(text: TextMatcher, options: { exact?: boolean }): PlaywrightLocator; // Find elements by text content, scoped to this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.innerText",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "innerText",
+      "signature": "innerText(options: { timeoutMs?: number }): Promise<string>; // Return the rendered (visible) text of the first matched element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.isEnabled",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "isEnabled",
+      "signature": "isEnabled(): Promise<boolean>; // Whether the first matched element is currently enabled.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.isVisible",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "isVisible",
+      "signature": "isVisible(): Promise<boolean>; // Whether the first matched element is currently visible.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.last",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "last",
+      "signature": "last(): PlaywrightLocator; // Return a locator pointing at the last matched element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.locator",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "locator",
+      "signature": "locator(selector: string, options: LocatorLocatorOptions): PlaywrightLocator; // Create a descendant locator scoped to this locator.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "PlaywrightLocator.nth",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "nth",
+      "signature": "nth(index: number): PlaywrightLocator; // Return a locator pointing at the Nth matched element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.or",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "or",
+      "signature": "or(locator: PlaywrightLocator): PlaywrightLocator; // Return a locator matching elements that satisfy either this locator or `locator`.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.press",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "press",
+      "signature": "press(value: string, options: { timeoutMs?: number }): Promise<void>; // Press a keyboard key while this locator is focused.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.pressSequentially",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "pressSequentially",
+      "signature": "pressSequentially(value: string, options: LocatorPressSequentiallyOptions): Promise<void>; // Focus the element and press each character in the text sequentially without clearing its existing value.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.selectOption",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "selectOption",
+      "signature": "selectOption(value: SelectOptionInput | Array<SelectOptionInput>, options: { timeoutMs?: number }): Promise<void>; // Select one or more options on a native `<select>` element.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.setChecked",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "setChecked",
+      "signature": "setChecked(checked: boolean, options: LocatorCheckOptions): Promise<void>; // Set a checkbox or switch-like control to a checked/unchecked state.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.textContent",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "textContent",
+      "signature": "textContent(options: { timeoutMs?: number }): Promise<null | string>; // Return the raw textContent of the first matched element (or null if missing).",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.type",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "type",
+      "signature": "type(value: string, options: { timeoutMs?: number }): Promise<void>; // Type text into the element without clearing existing content.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.uncheck",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "uncheck",
+      "signature": "uncheck(options: LocatorCheckOptions): Promise<void>; // Uncheck a checkbox or switch-like control.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightLocator.waitFor",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightLocator",
+      "member": "waitFor",
+      "signature": "waitFor(options: LocatorWaitForOptions): Promise<void>; // Wait for the element to reach a specific state.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightDownload.path",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightDownload",
+      "member": "path",
+      "signature": "path(options: { timeoutMs?: number }): Promise<null | string>; // Return the local path to the downloaded file, if available.",
+      "unsupportedByDefaultIn": null,
+      "documented": false,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFileChooser.isMultiple",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFileChooser",
+      "member": "isMultiple",
+      "signature": "isMultiple(): boolean; // Whether the input allows selecting multiple files.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PlaywrightFileChooser.setFiles",
+      "layer": "browser-desktop",
+      "iface": "PlaywrightFileChooser",
+      "member": "setFiles",
+      "signature": "setFiles(files: FileChooserFiles, options: { timeoutMs?: number }): Promise<void>; // Set the files for this chooser.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "TabClipboardAPI.read",
+      "layer": "browser-desktop",
+      "iface": "TabClipboardAPI",
+      "member": "read",
+      "signature": "read(): Promise<Array<TabClipboardItem>>; // Read clipboard items, including text and binary payloads.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "TabClipboardAPI.readText",
+      "layer": "browser-desktop",
+      "iface": "TabClipboardAPI",
+      "member": "readText",
+      "signature": "readText(): Promise<string>; // Read plain text from the browser clipboard.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "TabClipboardAPI.write",
+      "layer": "browser-desktop",
+      "iface": "TabClipboardAPI",
+      "member": "write",
+      "signature": "write(items: Array<TabClipboardItem>): Promise<void>; // Write clipboard items.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "TabClipboardAPI.writeText",
+      "layer": "browser-desktop",
+      "iface": "TabClipboardAPI",
+      "member": "writeText",
+      "signature": "writeText(text: string): Promise<void>; // Write plain text to the browser clipboard.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "TabDevAPI.logs",
+      "layer": "browser-desktop",
+      "iface": "TabDevAPI",
+      "member": "logs",
+      "signature": "logs(options: TabDevLogsOptions): Promise<Array<TabDevLogEntry>>; // Read console log messages captured for this tab.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": true
+    },
+    {
+      "id": "AlertDialog.type",
+      "layer": "browser-desktop",
+      "iface": "AlertDialog",
+      "member": "type",
+      "signature": "type: \"alert\";",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "AlertDialog.dismiss",
+      "layer": "browser-desktop",
+      "iface": "AlertDialog",
+      "member": "dismiss",
+      "signature": "dismiss(): Promise<void>;",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "BeforeUnloadDialog.type",
+      "layer": "browser-desktop",
+      "iface": "BeforeUnloadDialog",
+      "member": "type",
+      "signature": "type: \"beforeunload\";",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "BeforeUnloadDialog.dismiss",
+      "layer": "browser-desktop",
+      "iface": "BeforeUnloadDialog",
+      "member": "dismiss",
+      "signature": "dismiss(): Promise<void>;",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "ConfirmDialog.type",
+      "layer": "browser-desktop",
+      "iface": "ConfirmDialog",
+      "member": "type",
+      "signature": "type: \"confirm\";",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "ConfirmDialog.accept",
+      "layer": "browser-desktop",
+      "iface": "ConfirmDialog",
+      "member": "accept",
+      "signature": "accept(): Promise<void>;",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "ConfirmDialog.dismiss",
+      "layer": "browser-desktop",
+      "iface": "ConfirmDialog",
+      "member": "dismiss",
+      "signature": "dismiss(): Promise<void>;",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "Documentation.get",
+      "layer": "browser-desktop",
+      "iface": "Documentation",
+      "member": "get",
+      "signature": "get(name: string): Promise<string>; // Read packaged documentation by its extensionless relative path.",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PromptDialog.type",
+      "layer": "browser-desktop",
+      "iface": "PromptDialog",
+      "member": "type",
+      "signature": "type: \"prompt\";",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PromptDialog.accept",
+      "layer": "browser-desktop",
+      "iface": "PromptDialog",
+      "member": "accept",
+      "signature": "accept(text: string): Promise<void>;",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    },
+    {
+      "id": "PromptDialog.dismiss",
+      "layer": "browser-desktop",
+      "iface": "PromptDialog",
+      "member": "dismiss",
+      "signature": "dismiss(): Promise<void>;",
+      "unsupportedByDefaultIn": null,
+      "documented": null,
+      "in_traces": false
+    }
+  ]
+}

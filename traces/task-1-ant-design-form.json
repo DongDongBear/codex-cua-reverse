@@ -1,0 +1,170 @@
+[
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:21:37.934Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_L5p0JtR28cUwYwLPKIq1YonC",
+    "item_id": "fc_05a61cc4349bad21016aa26890d22c87d0ab3d38bdb9180aa6",
+    "args": {
+      "code": "let browser = await cua.getBrowser({ url: \"https://ant.design/components/form\" });",
+      "title": "查看 Ant Design 表单页面"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:21:45.520Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_ZadPs7v59UMruvLQA0CdL4sE",
+    "item_id": "fc_05a61cc4349bad21016aa26897c03887d0b56f59c2200da5cb",
+    "args": {
+      "code": "await cua.listTabs({browser:browser.browserId});",
+      "title": "找到当前表单标签页"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:21:50.003Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_ubx0Uvj0gW7qFmrNzSMmo1Uv",
+    "item_id": "fc_05a61cc4349bad21016aa2689cf7d487d096868e5885cf68d9",
+    "args": {
+      "code": "let tab = await cua.getTab(\"1\", {browser:browser.browserId});",
+      "title": "读取表单控件"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:21:57.165Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_F4uUYfYoeP8bXeqe7xj85KEG",
+    "item_id": "fc_05a61cc4349bad21016aa268a3e55487d097df55ed6a06100b",
+    "args": {
+      "code": "await tab.click(325); await tab.getAXState();",
+      "title": "测试空表单提交校验"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:22:04.862Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_kXnXtlEF9NJEgbv99e5MyCKK",
+    "item_id": "fc_05a61cc4349bad21016aa268aa980087d0ad52b2f88720cd6e",
+    "args": {
+      "code": "await tab.click(4523); await tab.typeText(\"测试用户_Test123\"); await tab.click(4528); await tab.typeText(\"DemoOnly!123\"); await tab.click(323); await tab.click(325); await tab.getAXState();",
+      "title": "输入测试字符并提交基础表单"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:22:12.308Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_dEw4JndQkLuX8yqvU36cDC8v",
+    "item_id": "fc_05a61cc4349bad21016aa268b25f8887d0854b7abab9b8f4f0",
+    "args": {
+      "code": "let pt = await browser.tabs.get(\"1\"); nodeRepl.write(await pt.dev.logs({levels:[\"log\"],limit:5})); await tab.click(349); await tab.getAXState();",
+      "title": "确认提交回调并测试自动填充"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:22:18.007Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_UPYTMdKeN0YhnKPtPqFNxIPt",
+    "item_id": "fc_05a61cc4349bad21016aa268b9031887d08eea3d971f8207e0",
+    "args": {
+      "code": "await tab.click(344); await tab.getAXState();",
+      "title": "测试下拉选择选项"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:22:30.729Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_XPsviJ0LZNLTllylvqVzcG4Z",
+    "item_id": "fc_05a61cc4349bad21016aa268c496bc87d0962d294112409c15",
+    "args": {
+      "code": "await tab.click(4531); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Note|hello|Hello|female|Gender|340/.test(x)).join('\\n'));",
+      "title": "确认选择性别后的输入联动"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:22:37.916Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_vUY0Vx1Re12kkEztNnBv3AFJ",
+    "item_id": "fc_05a61cc4349bad21016aa268cbb8b487d09b5715a5a6af62ad",
+    "args": {
+      "code": "await tab.click(350); await tab.click(351); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Note|option|Gender|340/.test(x)).join('\\n'));",
+      "title": "测试提交及 Reset 清空"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:22:46.401Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_VfRcedGPXnBSz9YHs5dNJwUG",
+    "item_id": "fc_05a61cc4349bad21016aa268d3aca487d08c6ff8a0eb87d3dd",
+    "args": {
+      "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').fill('测试 Alice'); await pt.playwright.locator('[id=\"validateOnly_age\"]').fill('28'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|button.*Submit/.test(x)).join('\\n'));",
+      "title": "测试填写后启用 Submit"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:22:52.577Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_9y2Jy5aafnIMSuG9aR2193J4",
+    "item_id": "fc_05a61cc4349bad21016aa268da2e6087d081002e350f51c219",
+    "args": {
+      "code": "await tab.click(896); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Reset|Submit/.test(x)).join('\\n'));",
+      "title": "点击已启用的提交按钮"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:23:01.649Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_aMAHRSl7rlFLxj0z0yihBxbG",
+    "item_id": "fc_05a61cc4349bad21016aa268e171b487d0ada191cf45b69ea2",
+    "args": {
+      "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').fill(''); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Submit/.test(x)).join('\\n')); await pt.playwright.locator('[id=\"name\"]').fill('中文测试 ABC 123'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Name Value|Custom Value|中文/.test(x)).join('\\n'));",
+      "title": "验证清空后禁用和实时值更新"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:23:11.931Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_pAbvIYk9ixeXc49nqJjFNtVD",
+    "item_id": "fc_05a61cc4349bad21016aa268ec3bec87d0a5300d8a28204403",
+    "args": {
+      "code": "nodeRepl.write(await pt.playwright.locator('[id=\"validateOnly_name\"]').evaluate(el=>({value:el.value,buttons:Array.from(el.closest('form').querySelectorAll('button')).map(b=>({text:b.textContent,disabled:b.disabled}))}))); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Add field|dynamic_form_item|button.*Reset/.test(x)).join('\\n'));",
+      "title": "核实清空后的按钮状态"
+    }
+  },
+  {
+    "session": "task-1-ant-design-form",
+    "ts": "2026-09-10T08:23:19.377Z",
+    "event": "response.output_item.done",
+    "name": "js",
+    "call_id": "call_S9eGWGThQGrAu2YaPmyinWmX",
+    "item_id": "fc_05a61cc4349bad21016aa268f4766487d09f920f73079e6dfc",
+    "args": {
+      "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').press('ControlOrMeta+a'); await pt.playwright.locator('[id=\"validateOnly_name\"]').press('Backspace'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Submit/.test(x)).join('\\n'));",
+      "title": "用键盘删除内容测试必填条件"
+    }
+  }
+]

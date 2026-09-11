@@ -1,0 +1,169 @@
+{
+  "ts": "2026-09-10T11:06:48Z",
+  "fixtures": {
+    "ping_v5": {
+      "agree": true,
+      "python": {
+        "json": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "ping",
+          "params": {
+            "clientApiVersion": "CodexComputerUseIPC-5"
+          }
+        },
+        "frame_len": 98,
+        "body_len": 94,
+        "sha256_prefix": "730ec1b6a3e42f2f",
+        "hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 94
+      },
+      "node": {
+        "frame_len": 98,
+        "body_len": 94,
+        "sha256_prefix": "730ec1b6a3e42f2f",
+        "hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 94
+      }
+    },
+    "ping_v0": {
+      "agree": true,
+      "python": {
+        "json": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "ping",
+          "params": {
+            "clientApiVersion": "CodexComputerUseIPC-0"
+          }
+        },
+        "frame_len": 98,
+        "body_len": 94,
+        "sha256_prefix": "3d0d7b8080897470",
+        "hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 94
+      },
+      "node": {
+        "frame_len": 98,
+        "body_len": 94,
+        "sha256_prefix": "3d0d7b8080897470",
+        "hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 94
+      }
+    },
+    "list_apps": {
+      "agree": true,
+      "python": {
+        "json": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "request",
+          "params": {
+            "clientApiVersion": "CodexComputerUseIPC-5",
+            "requestType": "ComputerUseIPCListAppsRequest",
+            "request": {},
+            "deadlineUnixMilliseconds": 0,
+            "codexTurnMetadata": {
+              "source": "v1-frame-fixture"
+            }
+          }
+        },
+        "frame_len": 239,
+        "body_len": 235,
+        "sha256_prefix": "cf5acf4912993935",
+        "hex_head": "eb0000007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 235
+      },
+      "node": {
+        "frame_len": 239,
+        "body_len": 235,
+        "sha256_prefix": "cf5acf4912993935",
+        "hex_head": "eb0000007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 235
+      }
+    },
+    "get_skyshot_finder": {
+      "agree": true,
+      "python": {
+        "json": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "request",
+          "params": {
+            "clientApiVersion": "CodexComputerUseIPC-5",
+            "requestType": "ComputerUseIPCAppGetSkyshotRequest",
+            "request": {
+              "app": "Finder",
+              "disableDiff": true
+            },
+            "deadlineUnixMilliseconds": 0,
+            "codexTurnMetadata": {
+              "source": "v1-frame-fixture"
+            }
+          }
+        },
+        "frame_len": 277,
+        "body_len": 273,
+        "sha256_prefix": "697e48e8f113fb3f",
+        "hex_head": "110100007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 273
+      },
+      "node": {
+        "frame_len": 277,
+        "body_len": 273,
+        "sha256_prefix": "697e48e8f113fb3f",
+        "hex_head": "110100007b226a736f6e727063223a22322e30222c226964",
+        "prefix_u32le": 273
+      }
+    }
+  },
+  "runtime": {
+    "ping": {
+      "python_error": "socket closed",
+      "node_error": "socket closed",
+      "python_ok": false,
+      "node_ok": false,
+      "python_rpc": null,
+      "node_rpc": null,
+      "agree_closed_no_rpc": true
+    },
+    "list_apps": {
+      "python_error": "socket closed",
+      "node_error": "socket closed",
+      "python_ok": false,
+      "node_ok": false,
+      "python_rpc": null,
+      "node_rpc": null,
+      "agree_closed_no_rpc": true
+    },
+    "get_app_state_finder": {
+      "python_error": "socket closed",
+      "node_error": "socket closed",
+      "python_ok": false,
+      "node_ok": false,
+      "python_rpc": null,
+      "node_rpc": null,
+      "agree_closed_no_rpc": true
+    },
+    "adversarial_wrong_version": {
+      "python_error": "socket closed",
+      "node_error": "socket closed",
+      "python_ok": false,
+      "node_ok": false,
+      "python_rpc": null,
+      "node_rpc": null,
+      "agree_closed_no_rpc": true
+    },
+    "connect_only": {
+      "python_error": "empty",
+      "node_error": "empty",
+      "python_ok": true,
+      "node_ok": true,
+      "python_rpc": null,
+      "node_rpc": null,
+      "agree_closed_no_rpc": true
+    }
+  },
+  "all_fixtures_agree": true,
+  "all_runtime_agree": true
+}

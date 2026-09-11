@@ -1,0 +1,2 @@
+{"id":1,"jsonrpc":"2.0","result":{"capabilities":{"tools":{"listChanged":false}},"protocolVersion":"2025-06-18","serverInfo":{"name":"Computer History","version":"60925a6367b858e09bb03be621161a9bdb2a0b2fee267285534894cd82963e5c"}}}
+{"id":2,"jsonrpc":"2.0","result":{"content":[{"text":"Computer Use server error -10000: Sender process is not authenticated","type":"text"}],"isError":true}}

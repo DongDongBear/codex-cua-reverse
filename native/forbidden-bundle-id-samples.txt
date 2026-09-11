@@ -1,0 +1,30 @@
+# Strings sampled from SkyComputerUseService — NOT a complete policy table.
+# Classification (forbidden vs denied vs security-process) is compiled Swift.
+
+com.1password.1password
+com.1password.safari
+com.apple.SecurityAgent
+com.apple.LocalAuthentication.UIAgent
+com.apple.LocalAuthenticationRemoteService
+com.apple.WindowManager
+com.apple.controlcenter
+com.apple.notificationcenterui
+com.apple.UserNotificationCenter
+com.apple.finder
+com.apple.dock
+com.apple.systempreferences
+com.apple.Safari
+com.apple.SafariTechnologyPreview
+com.apple.Terminal
+com.googlecode.iterm2
+net.kovidgoyal.kitty
+dev.warp.Warp-Stable
+org.mozilla.firefox
+com.bitwarden.desktop
+com.dashlane.dashlanephonefinal
+me.proton.pass.catalyst
+me.proton.pass.electron
+com.openai.chat
+com.openai.codex
+com.openai.atlas
+com.openai.sky.CUAService

@@ -1,0 +1,579 @@
+{
+  "ts": "2026-09-10T11:00:36.843Z",
+  "clientUrl": "file:///Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/@oai/sky/dist/project/cua/sky_js/src/targets/mac/client.js",
+  "apiVersion": "CodexComputerUseIPC-5",
+  "sock": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+  "sockExists": true,
+  "checks": [
+    {
+      "name": "import_and_shim",
+      "ok": true,
+      "detail": {
+        "clientUrl": "file:///Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/@oai/sky/dist/project/cua/sky_js/src/targets/mac/client.js",
+        "apiVersion": "CodexComputerUseIPC-5",
+        "sock": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+        "sockExists": true,
+        "nodeReplHasNativePipe": true,
+        "envPipe": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+        "macMethods": [
+          "listApps",
+          "startAudioRecording",
+          "stopAudioRecording",
+          "getAppPolicy",
+          "startApp",
+          "getAppState",
+          "click",
+          "drag",
+          "paste",
+          "performSecondaryAction",
+          "pressKey",
+          "scroll",
+          "setValue",
+          "selectText",
+          "typeText",
+          "performAction",
+          "request",
+          "getTransport",
+          "transport"
+        ],
+        "serverErrorCode": {
+          "senderProcessNotAuthenticated": -10000,
+          "couldNotGetRequestData": -10001,
+          "couldNotGetRequestTypeName": -10002,
+          "couldNotResolveRequestType": -10003,
+          "unhandledEvent": -10004,
+          "unknownError": -10005,
+          "appNotAllowed": -10006,
+          "runningApplicationNotFound": -10007,
+          "accessibilityError": -10008,
+          "permissionsNotGranted": -10009,
+          "invalidApp": -10010,
+          "noActiveSession": -10011,
+          "userStoppedSession": -10012,
+          "incompatibleClientVersion": -10013,
+          "permissionsPending": -10014,
+          "blockedURL": -10015,
+          "userIntervened": -10016,
+          "couldNotGetSenderPID": -10017,
+          "ambiguousApp": -10018,
+          "couldNotGetBootstrapPort": -10019,
+          "screenLocked": -10020
+        }
+      }
+    },
+    {
+      "name": "method_name_mapping",
+      "ok": true,
+      "detail": {
+        "windowComputerUseClient": [
+          "target",
+          "click",
+          "drag",
+          "get_app_state",
+          "list_apps",
+          "paste",
+          "perform_secondary_action",
+          "press_key",
+          "scroll",
+          "select_text",
+          "set_value",
+          "type_text",
+          "start_audio_recording",
+          "stop_audio_recording"
+        ],
+        "macComputerUseClient": [
+          "listApps",
+          "startAudioRecording",
+          "stopAudioRecording",
+          "getAppPolicy",
+          "startApp",
+          "getAppState",
+          "click",
+          "drag",
+          "paste",
+          "performSecondaryAction",
+          "pressKey",
+          "scroll",
+          "setValue",
+          "selectText",
+          "typeText",
+          "performAction",
+          "request",
+          "getTransport",
+          "transport"
+        ],
+        "tinyskyTarget": [
+          "getAXState",
+          "getScreenshot",
+          "getAXStateAndScreenshot",
+          "paste",
+          "click",
+          "drag",
+          "pressKey",
+          "scroll",
+          "selectText",
+          "setValue",
+          "typeText",
+          "performSecondaryAction",
+          "initialize"
+        ],
+        "map": [
+          {
+            "window": "click",
+            "macClient": "click",
+            "macHas": true,
+            "tinyskyTarget": "click"
+          },
+          {
+            "window": "drag",
+            "macClient": "drag",
+            "macHas": true,
+            "tinyskyTarget": "drag"
+          },
+          {
+            "window": "get_app_state",
+            "macClient": "getAppState",
+            "macHas": true,
+            "tinyskyTarget": null
+          },
+          {
+            "window": "list_apps",
+            "macClient": "listApps",
+            "macHas": true,
+            "tinyskyTarget": null
+          },
+          {
+            "window": "paste",
+            "macClient": "paste",
+            "macHas": true,
+            "tinyskyTarget": "paste"
+          },
+          {
+            "window": "perform_secondary_action",
+            "macClient": "performSecondaryAction",
+            "macHas": true,
+            "tinyskyTarget": "performSecondaryAction"
+          },
+          {
+            "window": "press_key",
+            "macClient": "pressKey",
+            "macHas": true,
+            "tinyskyTarget": "pressKey"
+          },
+          {
+            "window": "scroll",
+            "macClient": "scroll",
+            "macHas": true,
+            "tinyskyTarget": "scroll"
+          },
+          {
+            "window": "select_text",
+            "macClient": "selectText",
+            "macHas": true,
+            "tinyskyTarget": "selectText"
+          },
+          {
+            "window": "set_value",
+            "macClient": "setValue",
+            "macHas": true,
+            "tinyskyTarget": "setValue"
+          },
+          {
+            "window": "type_text",
+            "macClient": "typeText",
+            "macHas": true,
+            "tinyskyTarget": "typeText"
+          },
+          {
+            "window": "start_audio_recording",
+            "macClient": "startAudioRecording",
+            "macHas": true,
+            "tinyskyTarget": null
+          },
+          {
+            "window": "stop_audio_recording",
+            "macClient": "stopAudioRecording",
+            "macHas": true,
+            "tinyskyTarget": null
+          }
+        ],
+        "extrasOnMacClient": [
+          "getAppPolicy",
+          "startApp"
+        ],
+        "allWindowMethodsPresentOnMac": true
+      }
+    },
+    {
+      "name": "listApps",
+      "ok": false,
+      "error": "Sky Computer Use service startup request failed",
+      "nameErr": "SkyComputerUseTransportError",
+      "err": {
+        "name": "SkyComputerUseTransportError",
+        "message": "Sky Computer Use service startup request failed",
+        "cause": {
+          "name": "Error",
+          "message": "Sky Computer Use requires nodeRepl.launchServices support"
+        }
+      }
+    },
+    {
+      "name": "getAppState_Finder",
+      "ok": false,
+      "error": "Sky Computer Use service startup request failed",
+      "nameErr": "SkyComputerUseTransportError",
+      "err": {
+        "name": "SkyComputerUseTransportError",
+        "message": "Sky Computer Use service startup request failed",
+        "cause": {
+          "name": "Error",
+          "message": "Sky Computer Use requires nodeRepl.launchServices support"
+        }
+      }
+    },
+    {
+      "name": "encode_click_coord_like_trace",
+      "ok": true,
+      "detail": {
+        "requestType": "ComputerUseIPCAppPerformActionRequest",
+        "request": {
+          "app": "Finder",
+          "action": {
+            "click": {
+              "at": {
+                "coordinate": {
+                  "_0": [
+                    119,
+                    35
+                  ]
+                }
+              },
+              "clickCount": 1,
+              "mouseButton": 0
+            }
+          }
+        },
+        "apiVersion": "CodexComputerUseIPC-5"
+      }
+    },
+    {
+      "name": "encode_click_element_like_trace",
+      "ok": true,
+      "detail": {
+        "requestType": "ComputerUseIPCAppPerformActionRequest",
+        "request": {
+          "app": "Finder",
+          "action": {
+            "click": {
+              "at": {
+                "elementID": {
+                  "_0": "0"
+                }
+              },
+              "clickCount": 1,
+              "mouseButton": 0
+            }
+          }
+        },
+        "apiVersion": "CodexComputerUseIPC-5"
+      }
+    },
+    {
+      "name": "encode_typeText_like_trace",
+      "ok": true,
+      "detail": {
+        "requestType": "ComputerUseIPCAppPerformActionRequest",
+        "request": {
+          "app": "Finder",
+          "action": {
+            "type": {
+              "_0": "Linear"
+            }
+          }
+        },
+        "apiVersion": "CodexComputerUseIPC-5"
+      }
+    },
+    {
+      "name": "encode_setValue_like_trace",
+      "ok": true,
+      "detail": {
+        "requestType": "ComputerUseIPCAppPerformActionRequest",
+        "request": {
+          "app": "Finder",
+          "action": {
+            "setValue": {
+              "elementID": "128",
+              "value": "shape-only"
+            }
+          }
+        },
+        "apiVersion": "CodexComputerUseIPC-5"
+      }
+    }
+  ],
+  "socketEvents": [
+    {
+      "t": 1789038036337,
+      "ev": "connect",
+      "path": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock"
+    },
+    {
+      "t": 1789038036364,
+      "ev": "end",
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036364,
+      "ev": "close",
+      "hadError": false,
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036466,
+      "ev": "connect",
+      "path": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock"
+    },
+    {
+      "t": 1789038036491,
+      "ev": "end",
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036491,
+      "ev": "close",
+      "hadError": false,
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036593,
+      "ev": "connect",
+      "path": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock"
+    },
+    {
+      "t": 1789038036615,
+      "ev": "end",
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036615,
+      "ev": "close",
+      "hadError": false,
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036716,
+      "ev": "connect",
+      "path": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock"
+    },
+    {
+      "t": 1789038036738,
+      "ev": "end",
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036738,
+      "ev": "close",
+      "hadError": false,
+      "inBytes": 0
+    },
+    {
+      "t": 1789038036840,
+      "ev": "connect",
+      "path": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock"
+    }
+  ],
+  "auth": {
+    "connected": true,
+    "inboundBytes": 0,
+    "inboundRpc": 0,
+    "outboundPing": 5,
+    "jsonRpcErrorCode": null,
+    "mappedIfJsonRpcAuth": {
+      "name": "senderProcessNotAuthenticated",
+      "code": -10000
+    },
+    "observedJsError": {
+      "name": "SkyComputerUseTransportError",
+      "message": "Sky Computer Use service startup request failed",
+      "cause": {
+        "name": "Error",
+        "message": "Sky Computer Use requires nodeRepl.launchServices support"
+      }
+    },
+    "note": "Service accepted the Unix socket then FIN with zero JSON-RPC bytes. No ServerErrorCode on the wire."
+  },
+  "frames": [
+    {
+      "dir": "out",
+      "id": 1,
+      "method": "ping",
+      "params": {
+        "clientApiVersion": "CodexComputerUseIPC-5",
+        "requestType": null,
+        "hasDeadline": false
+      },
+      "error": null,
+      "resultKeys": null,
+      "parseError": null
+    },
+    {
+      "dir": "out",
+      "id": 1,
+      "method": "ping",
+      "params": {
+        "clientApiVersion": "CodexComputerUseIPC-5",
+        "requestType": null,
+        "hasDeadline": false
+      },
+      "error": null,
+      "resultKeys": null,
+      "parseError": null
+    },
+    {
+      "dir": "out",
+      "id": 1,
+      "method": "ping",
+      "params": {
+        "clientApiVersion": "CodexComputerUseIPC-5",
+        "requestType": null,
+        "hasDeadline": false
+      },
+      "error": null,
+      "resultKeys": null,
+      "parseError": null
+    },
+    {
+      "dir": "out",
+      "id": 1,
+      "method": "ping",
+      "params": {
+        "clientApiVersion": "CodexComputerUseIPC-5",
+        "requestType": null,
+        "hasDeadline": false
+      },
+      "error": null,
+      "resultKeys": null,
+      "parseError": null
+    },
+    {
+      "dir": "out",
+      "id": 1,
+      "method": "ping",
+      "params": {
+        "clientApiVersion": "CodexComputerUseIPC-5",
+        "requestType": null,
+        "hasDeadline": false
+      },
+      "error": null,
+      "resultKeys": null,
+      "parseError": null
+    }
+  ],
+  "capturedRequests": [
+    {
+      "requestType": "ComputerUseIPCListAppsRequest",
+      "request": {},
+      "apiVersion": "CodexComputerUseIPC-5"
+    },
+    {
+      "requestType": "ComputerUseIPCAppGetSkyshotRequest",
+      "request": {
+        "app": "Finder",
+        "disableDiff": true
+      },
+      "apiVersion": "CodexComputerUseIPC-5"
+    },
+    {
+      "requestType": "ComputerUseIPCAppPerformActionRequest",
+      "request": {
+        "app": "Finder",
+        "action": {
+          "click": {
+            "at": {
+              "coordinate": {
+                "_0": [
+                  119,
+                  35
+                ]
+              }
+            },
+            "clickCount": 1,
+            "mouseButton": 0
+          }
+        }
+      },
+      "apiVersion": "CodexComputerUseIPC-5"
+    },
+    {
+      "requestType": "ComputerUseIPCAppPerformActionRequest",
+      "request": {
+        "app": "Finder",
+        "action": {
+          "click": {
+            "at": {
+              "elementID": {
+                "_0": "0"
+              }
+            },
+            "clickCount": 1,
+            "mouseButton": 0
+          }
+        }
+      },
+      "apiVersion": "CodexComputerUseIPC-5"
+    },
+    {
+      "requestType": "ComputerUseIPCAppPerformActionRequest",
+      "request": {
+        "app": "Finder",
+        "action": {
+          "type": {
+            "_0": "Linear"
+          }
+        }
+      },
+      "apiVersion": "CodexComputerUseIPC-5"
+    },
+    {
+      "requestType": "ComputerUseIPCAppPerformActionRequest",
+      "request": {
+        "app": "Finder",
+        "action": {
+          "setValue": {
+            "elementID": "128",
+            "value": "shape-only"
+          }
+        }
+      },
+      "apiVersion": "CodexComputerUseIPC-5"
+    }
+  ],
+  "serverErrorCode": {
+    "senderProcessNotAuthenticated": -10000,
+    "couldNotGetRequestData": -10001,
+    "couldNotGetRequestTypeName": -10002,
+    "couldNotResolveRequestType": -10003,
+    "unhandledEvent": -10004,
+    "unknownError": -10005,
+    "appNotAllowed": -10006,
+    "runningApplicationNotFound": -10007,
+    "accessibilityError": -10008,
+    "permissionsNotGranted": -10009,
+    "invalidApp": -10010,
+    "noActiveSession": -10011,
+    "userStoppedSession": -10012,
+    "incompatibleClientVersion": -10013,
+    "permissionsPending": -10014,
+    "blockedURL": -10015,
+    "userIntervened": -10016,
+    "couldNotGetSenderPID": -10017,
+    "ambiguousApp": -10018,
+    "couldNotGetBootstrapPort": -10019,
+    "screenLocked": -10020
+  },
+  "skyComputerUseErrorName": "s",
+  "passed": 6,
+  "failed": 2
+}

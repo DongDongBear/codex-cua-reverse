@@ -1,0 +1,107 @@
+load("@build_bazel_rules_apple//apple:macos.bzl", "macos_application")
+load("@build_bazel_rules_apple//apple:versioning.bzl", "apple_bundle_version")
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_interop_hint", "swift_library")
+load("@rules_cc//cc:objc_library.bzl", "objc_library")
+load("//Bazel:entitlements.bzl", "entitlements_file")
+
+objc_library(
+    name = "AppConstants",
+    aspect_hints = [":AppConstantsSwiftInterop"],
+    hdrs = ["//Software:ConstantsHeader"],
+    defines = [
+        "APP_BUNDLE_IDENTIFIER=com.openai.sky.CUAService",
+        "APP_GROUP_IDENTIFIER=2DC432GLL2.com.openai.sky.CUAService",
+        "CUA_SERVICE_APP_GROUP_IDENTIFIER=2DC432GLL2.com.openai.sky.CUAService",
+        "DEVELOPMENT_APP_BUNDLE_IDENTIFIER=com.openai.sky.CUAService",
+        "PRODUCTION_APP_BUNDLE_IDENTIFIER=com.openai.sky.CUAService",
+        "SENTRY_DSN=",
+        "SERVICE_AGENT_LABEL=com.openai.sky.CUAService.agent",
+        "SERVICE_BUNDLE_IDENTIFIER=com.openai.sky.CUAService",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+swift_interop_hint(
+    name = "AppConstantsSwiftInterop",
+    module_map = "//Software:ConstantsModuleMap",
+    module_name = "AppConstants",
+)
+
+filegroup(
+    name = "Assets.xcassets",
+    srcs = glob(
+        ["Assets.xcassets/**"],
+        exclude = ["Assets.xcassets/AppIcon.appiconset/**"],
+    ),
+)
+
+filegroup(
+    name = "CUAAppIcon.icon",
+    srcs = glob(["CUAAppIcon.icon/**"]),
+)
+
+objc_library(
+    name = "CUAServiceLauncher",
+    srcs = ["main.m"],
+)
+
+swift_library(
+    name = "CUAServiceSources",
+    srcs = glob(["*.swift"]),
+    copts = [
+        "-swift-version",
+        "5",
+    ],
+    data = [":Assets.xcassets"],
+    module_name = "CUAService",
+    deps = [
+        ":AppConstants",
+        "@cua_package//:ComputerUse",
+        "@cua_package//:ComputerUseClient",
+        "@cua_package//:Fog",
+        "@cua_package//:GraphicsSupport",
+        "@cua_package//:Logging",
+        "@cua_package//:SlimCore",
+        "@swiftpkg_oaiprotobuf//:OAIProtobuf",
+        "@swiftpkg_oaistatsig//:OAIStatsig",
+        "@swiftpkg_sparkle//:Sparkle",
+        "@swiftpkg_swift_protobuf//:SwiftProtobuf",
+    ],
+)
+
+apple_bundle_version(
+    name = "CUAServiceVersion",
+    build_label_pattern = "computer-use_{version}_{build}",
+    build_version = "{build}",
+    capture_groups = {
+        "build": "[0-9]+",
+        "version": "[0-9.]+",
+    },
+    fallback_build_label = "computer-use_1.0_1",
+    short_version_string = "{version}",
+)
+
+entitlements_file(
+    name = "CUAServiceEntitlements",
+    src = "CUAService.entitlements",
+    substitutions = {"$(CUA_SERVICE_APP_GROUP_IDENTIFIER)": "2DC432GLL2.com.openai.sky.CUAService"},
+)
+
+macos_application(
+    name = "CUAService",
+    additional_contents = {
+        "//SkyComputerUseClient:SkyComputerUseClient": "SharedSupport",
+    },
+    app_icons = [":CUAAppIcon.icon"],
+    bundle_id = "com.openai.sky.CUAService",
+    bundle_name = "Codex Computer Use",
+    entitlements = ":CUAServiceEntitlements",
+    executable_name = "SkyComputerUseService",
+    infoplists = ["//Bazel/Plists:CUAService.plist"],
+    minimum_os_version = "14.4",
+    version = ":CUAServiceVersion",
+    deps = [
+        ":CUAServiceLauncher",
+        ":CUAServiceSources",
+    ],
+)

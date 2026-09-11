@@ -1,0 +1,6 @@
+.DS_Store
+_tmp/
+*.sock
+*.bin
+verify/results/mcp-probe.bin
+verify/results/debug-live.stderr.log

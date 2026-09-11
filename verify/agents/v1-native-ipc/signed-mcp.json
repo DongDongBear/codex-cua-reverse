@@ -1,0 +1,91 @@
+{
+  "ts": "2026-09-10T11:02:23.514Z",
+  "client": "/Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+  "clientExists": true,
+  "childPid": 41872,
+  "stdoutBytes": 1146,
+  "stdoutHead": [
+    {
+      "framing": "ndjson",
+      "keys": [
+        "error",
+        "id",
+        "jsonrpc"
+      ],
+      "id": "D9F2CC14-867A-48D3-A101-09E079114C40"
+    },
+    {
+      "framing": "ndjson",
+      "keys": [
+        "error",
+        "id",
+        "jsonrpc"
+      ],
+      "id": "AD609A6F-D9BE-4696-8398-36ADA1BB6279"
+    },
+    {
+      "framing": "ndjson",
+      "keys": [
+        "error",
+        "id",
+        "jsonrpc"
+      ],
+      "id": "9E2AFD5E-9527-4043-A42C-D84A19B561BD"
+    },
+    {
+      "framing": "ndjson",
+      "keys": [
+        "error",
+        "id",
+        "jsonrpc"
+      ],
+      "id": "9317F876-5AC3-4810-B6DE-E788D2591E38"
+    },
+    {
+      "framing": "ndjson",
+      "keys": [
+        "error",
+        "id",
+        "jsonrpc"
+      ],
+      "id": "AC8C13E2-F753-4196-816C-40BC9E7AB777"
+    },
+    {
+      "framing": "ndjson",
+      "keys": [
+        "error",
+        "id",
+        "jsonrpc"
+      ],
+      "id": "51EBF5F0-8335-453B-AA41-E0BCF8A7D613"
+    }
+  ],
+  "stderr": "",
+  "lsofBefore": [
+    "SkyComput 41872 dongdong  txt    REG               1,17 14167776           144720152 /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+  ],
+  "checks": [
+    {
+      "name": "initialize",
+      "ok": false,
+      "ms": 20002,
+      "error": "initialize timed out after 20000ms",
+      "rpc": null
+    },
+    {
+      "name": "tools/list",
+      "ok": false,
+      "ms": 20002,
+      "error": "tools/list timed out after 20000ms",
+      "rpc": null
+    },
+    {
+      "name": "tools/call:list_apps",
+      "ok": false,
+      "error": "list_apps tool not in tools/list",
+      "rpc": null
+    }
+  ],
+  "passed": 0,
+  "failed": 3
+}

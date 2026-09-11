@@ -1,0 +1,246 @@
+{
+  "impl": "independent-caller.mjs",
+  "ts": "2026-09-10T11:06:50.091Z",
+  "sock": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+  "sock_exists": true,
+  "api": "CodexComputerUseIPC-5",
+  "exe": "/Users/dongdong/.local/share/fnm/node-versions/v24.15.0/installation/bin/node",
+  "pid": 49051,
+  "ppid": 48967,
+  "checks": {
+    "connect_only": {
+      "ok": true,
+      "connect_ms": 1,
+      "recv": "empty",
+      "elapsed_ms": 37
+    },
+    "ping": {
+      "ok": false,
+      "error": "socket closed",
+      "rpc": null,
+      "recv_bytes": 0,
+      "recv_hex_head": "",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "ping",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-5"
+        }
+      },
+      "frame_hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964223a312c226d6574686f64223a2270696e67222c22706172",
+      "frame_len": 98,
+      "events": [
+        {
+          "t_ms": 0,
+          "type": "connect"
+        },
+        {
+          "t_ms": 1,
+          "type": "wrote",
+          "frame_len": 98,
+          "body_len": 94
+        },
+        {
+          "t_ms": 23,
+          "type": "eof",
+          "buffered": 0
+        }
+      ]
+    },
+    "list_apps": {
+      "ok": false,
+      "error": "socket closed",
+      "rpc": null,
+      "recv_bytes": 0,
+      "recv_hex_head": "",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "request",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-5",
+          "requestType": "ComputerUseIPCListAppsRequest",
+          "request": {},
+          "deadlineUnixMilliseconds": 1789038415091,
+          "codexTurnMetadata": {
+            "source": "v1-independent-node"
+          }
+        }
+      },
+      "frame_hex_head": "fa0000007b226a736f6e727063223a22322e30222c226964223a312c226d6574686f64223a2272657175657374222c22",
+      "frame_len": 254,
+      "events": [
+        {
+          "t_ms": 0,
+          "type": "connect"
+        },
+        {
+          "t_ms": 0,
+          "type": "wrote",
+          "frame_len": 254,
+          "body_len": 250
+        },
+        {
+          "t_ms": 21,
+          "type": "eof",
+          "buffered": 0
+        }
+      ]
+    },
+    "get_app_state_finder": {
+      "ok": false,
+      "error": "socket closed",
+      "rpc": null,
+      "recv_bytes": 0,
+      "recv_hex_head": "",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "request",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-5",
+          "requestType": "ComputerUseIPCAppGetSkyshotRequest",
+          "request": {
+            "app": "Finder",
+            "disableDiff": true
+          },
+          "deadlineUnixMilliseconds": 1789038415091,
+          "codexTurnMetadata": {
+            "source": "v1-independent-node"
+          }
+        }
+      },
+      "frame_hex_head": "200100007b226a736f6e727063223a22322e30222c226964223a312c226d6574686f64223a2272657175657374222c22",
+      "frame_len": 292,
+      "events": [
+        {
+          "t_ms": 0,
+          "type": "connect"
+        },
+        {
+          "t_ms": 0,
+          "type": "wrote",
+          "frame_len": 292,
+          "body_len": 288
+        },
+        {
+          "t_ms": 22,
+          "type": "eof",
+          "buffered": 0
+        }
+      ]
+    },
+    "adversarial_wrong_version": {
+      "ok": false,
+      "error": "socket closed",
+      "rpc": null,
+      "recv_bytes": 0,
+      "recv_hex_head": "",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "ping",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-0"
+        }
+      },
+      "frame_hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964223a312c226d6574686f64223a2270696e67222c22706172",
+      "frame_len": 98,
+      "events": [
+        {
+          "t_ms": 1,
+          "type": "connect"
+        },
+        {
+          "t_ms": 1,
+          "type": "wrote",
+          "frame_len": 98,
+          "body_len": 94
+        },
+        {
+          "t_ms": 27,
+          "type": "eof",
+          "buffered": 0
+        }
+      ]
+    }
+  },
+  "frame_fixtures": {
+    "ping_v5": {
+      "json": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "ping",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-5"
+        }
+      },
+      "frame_len": 98,
+      "body_len": 94,
+      "sha256_prefix": "730ec1b6a3e42f2f",
+      "hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964",
+      "prefix_u32le": 94
+    },
+    "ping_v0": {
+      "json": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "ping",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-0"
+        }
+      },
+      "frame_len": 98,
+      "body_len": 94,
+      "sha256_prefix": "3d0d7b8080897470",
+      "hex_head": "5e0000007b226a736f6e727063223a22322e30222c226964",
+      "prefix_u32le": 94
+    },
+    "list_apps": {
+      "json": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "request",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-5",
+          "requestType": "ComputerUseIPCListAppsRequest",
+          "request": {},
+          "deadlineUnixMilliseconds": 0,
+          "codexTurnMetadata": {
+            "source": "v1-frame-fixture"
+          }
+        }
+      },
+      "frame_len": 239,
+      "body_len": 235,
+      "sha256_prefix": "cf5acf4912993935",
+      "hex_head": "eb0000007b226a736f6e727063223a22322e30222c226964",
+      "prefix_u32le": 235
+    },
+    "get_skyshot_finder": {
+      "json": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "request",
+        "params": {
+          "clientApiVersion": "CodexComputerUseIPC-5",
+          "requestType": "ComputerUseIPCAppGetSkyshotRequest",
+          "request": {
+            "app": "Finder",
+            "disableDiff": true
+          },
+          "deadlineUnixMilliseconds": 0,
+          "codexTurnMetadata": {
+            "source": "v1-frame-fixture"
+          }
+        }
+      },
+      "frame_len": 277,
+      "body_len": 273,
+      "sha256_prefix": "697e48e8f113fb3f",
+      "hex_head": "110100007b226a736f6e727063223a22322e30222c226964",
+      "prefix_u32le": 273
+    }
+  }
+}

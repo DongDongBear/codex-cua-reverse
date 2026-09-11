@@ -1,0 +1,8 @@
+{
+  "name": "content-length",
+  "pid": 43720,
+  "stdout_bytes": 382,
+  "stderr_bytes": 0,
+  "stdout_text": "{\"error\":{\"code\":-32700,\"data\":{\"detail\":\"Invalid message format\"},\"message\":\"Parse error: Invalid JSON: Invalid message format\"},\"id\":\"123BF0A6-6C31-403A-A533-FFF996F8A192\",\"jsonrpc\":\"2.0\"}\n{\"error\":{\"code\":-32700,\"data\":{\"detail\":\"Invalid message format\"},\"message\":\"Parse error: Invalid JSON: Invalid message format\"},\"id\":\"6E6E2852-F96D-4787-9F42-F1325D351D1C\",\"jsonrpc\":\"2.0\"}\n",
+  "stderr_text": ""
+}

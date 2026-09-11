@@ -1,0 +1,23 @@
+import type * as Click from "./Click";
+import type * as Drag from "./Drag";
+import type * as DragHandle from "./DragHandle";
+import type * as GetScreenshot from "./GetScreenshot";
+import type * as Move from "./Move";
+import type * as PressKey from "./PressKey";
+import type * as Scroll from "./Scroll";
+import type * as StartAudioRecording from "./StartAudioRecording";
+import type * as StopAudioRecording from "./StopAudioRecording";
+import type * as TypeText from "./TypeText";
+export type FullDesktopComputerUseClient = {
+    target: "linux";
+    click: Click.Function;
+    drag: Drag.Function;
+    drag_handle: DragHandle.Function;
+    get_screenshot: GetScreenshot.Function;
+    move: Move.Function;
+    press_key: PressKey.Function;
+    scroll: Scroll.Function;
+    start_audio_recording?: StartAudioRecording.Function;
+    stop_audio_recording?: StopAudioRecording.Function;
+    type_text: TypeText.Function;
+};

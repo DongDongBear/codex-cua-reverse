@@ -1,0 +1,456 @@
+{
+  "mcp": [
+    "list_apps",
+    "get_app_state",
+    "click",
+    "perform_secondary_action",
+    "set_value",
+    "select_text",
+    "scroll",
+    "drag",
+    "press_key",
+    "type_text"
+  ],
+  "rows": [
+    {
+      "i": 1,
+      "title": "打开电脑上的 Linear",
+      "api": "cua.getApp",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 2,
+      "name": "request_user_input_async",
+      "title": "",
+      "api": "request_user_input_async",
+      "ok": true,
+      "note": "protocol tool"
+    },
+    {
+      "i": 3,
+      "title": "查看 Linear 当前界面",
+      "api": "app.getScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 4,
+      "title": "显示 Linear 窗口",
+      "api": "app.performSecondaryAction",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 4,
+      "title": "显示 Linear 窗口",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 5,
+      "title": "展开 Linear 以创建测试 issue",
+      "api": "app.performSecondaryAction",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 5,
+      "title": "展开 Linear 以创建测试 issue",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 6,
+      "title": "新建 Linear issue",
+      "api": "app.pressKey",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 6,
+      "title": "新建 Linear issue",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 7,
+      "title": "打开 issue 创建窗口",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 7,
+      "title": "打开 issue 创建窗口",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 8,
+      "title": "检查 Linear 窗口连接",
+      "api": "cua.listApps",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 9,
+      "title": "重新连接 Linear 应用",
+      "api": "cua.getApp",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 10,
+      "title": "点击新建 issue",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 10,
+      "title": "点击新建 issue",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 11,
+      "title": "尝试通过菜单创建 issue",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 11,
+      "title": "尝试通过菜单创建 issue",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 12,
+      "title": "从菜单新建 issue",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 12,
+      "title": "从菜单新建 issue",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 13,
+      "title": "激活 Linear 应用",
+      "api": "cua.getApp",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 14,
+      "title": "通过系统搜索打开 Linear",
+      "api": "app.pressKey",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 14,
+      "title": "通过系统搜索打开 Linear",
+      "api": "app.typeText",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 14,
+      "title": "通过系统搜索打开 Linear",
+      "api": "app.pressKey",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 14,
+      "title": "通过系统搜索打开 Linear",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 15,
+      "name": "js_reset",
+      "title": "",
+      "api": "js_reset",
+      "ok": true,
+      "note": "protocol tool"
+    },
+    {
+      "i": 16,
+      "title": "重新初始化 Linear 控制连接",
+      "api": "cua.getApp",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 17,
+      "title": "打开 Linear 文件菜单",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 17,
+      "title": "打开 Linear 文件菜单",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 18,
+      "title": "新开 Linear 窗口恢复操作",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 18,
+      "title": "新开 Linear 窗口恢复操作",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 19,
+      "title": "查看窗口恢复选项",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 19,
+      "title": "查看窗口恢复选项",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 20,
+      "title": "将 Linear 所有窗口置前",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 20,
+      "title": "将 Linear 所有窗口置前",
+      "api": "app.getAXStateAndScreenshot",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 21,
+      "title": "创建补充测试 issue",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 21,
+      "title": "创建补充测试 issue",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 22,
+      "title": "填写测试范围并核对负责人",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 22,
+      "title": "填写测试范围并核对负责人",
+      "api": "app.typeText",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 22,
+      "title": "填写测试范围并核对负责人",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 22,
+      "title": "填写测试范围并核对负责人",
+      "api": "app.paste",
+      "tinysky": true,
+      "sky": true,
+      "mcp": false,
+      "ok": true
+    },
+    {
+      "i": 22,
+      "title": "填写测试范围并核对负责人",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 22,
+      "title": "填写测试范围并核对负责人",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 23,
+      "title": "确认指派给 dongdong",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 23,
+      "title": "确认指派给 dongdong",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 24,
+      "title": "修正并验证 issue 文本",
+      "api": "app.setValue",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 24,
+      "title": "修正并验证 issue 文本",
+      "api": "app.setValue",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 24,
+      "title": "修正并验证 issue 文本",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 25,
+      "title": "提交创建已指派的 issue",
+      "api": "app.click",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    },
+    {
+      "i": 25,
+      "title": "提交创建已指派的 issue",
+      "api": "app.getAXState",
+      "tinysky": true,
+      "sky": true,
+      "mcp": true,
+      "ok": true
+    }
+  ],
+  "failed": []
+}

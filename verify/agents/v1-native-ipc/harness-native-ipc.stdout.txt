@@ -1,0 +1,37 @@
+{
+  "ts": "2026-09-10T11:01:43.426Z",
+  "sock": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+  "sockExists": true,
+  "apiVersion": "CodexComputerUseIPC-5",
+  "checks": [
+    {
+      "name": "ping",
+      "ok": false,
+      "error": "socket closed",
+      "rpc": null
+    },
+    {
+      "name": "list_apps",
+      "ok": false,
+      "error": "request timed out after 30000ms",
+      "rpc": null
+    },
+    {
+      "name": "get_app_state_finder",
+      "ok": false,
+      "error": "request timed out after 30000ms",
+      "rpc": null
+    },
+    {
+      "name": "adversarial_wrong_version",
+      "ok": true,
+      "detail": {
+        "rejected": true,
+        "message": "socket closed",
+        "rpc": null
+      }
+    }
+  ],
+  "passed": 1,
+  "failed": 3
+}

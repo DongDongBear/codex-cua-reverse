@@ -1,0 +1,46 @@
+load("@build_bazel_rules_apple//apple:macos.bzl", "macos_application")
+load("@build_bazel_rules_apple//apple:versioning.bzl", "apple_bundle_version")
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load("//Bazel:entitlements.bzl", "entitlements_file")
+
+swift_library(
+    name = "SkyComputerUseClientSources",
+    srcs = ["SkyComputerUseClient.swift"],
+    copts = [
+        "-swift-version",
+        "5",
+    ],
+    deps = [
+        "//CUAService:AppConstants",
+        "@cua_package//:ComputerUseClient",
+    ],
+)
+
+apple_bundle_version(
+    name = "SkyComputerUseClientVersion",
+    build_label_pattern = "computer-use_{version}_{build}",
+    build_version = "{build}",
+    capture_groups = {
+        "build": "[0-9]+",
+        "version": "[0-9.]+",
+    },
+    fallback_build_label = "computer-use_1.0_1",
+    short_version_string = "{version}",
+)
+
+entitlements_file(
+    name = "SkyComputerUseClientEntitlements",
+    src = "SkyComputerUseClient.entitlements",
+    substitutions = {"$(CUA_SERVICE_APP_GROUP_IDENTIFIER)": "2DC432GLL2.com.openai.sky.CUAService"},
+)
+
+macos_application(
+    name = "SkyComputerUseClient",
+    bundle_id = "com.openai.sky.CUAService.cli",
+    entitlements = ":SkyComputerUseClientEntitlements",
+    infoplists = ["//Bazel/Plists:SkyComputerUseClient.plist"],
+    minimum_os_version = "14.4",
+    visibility = ["//CUAService:__pkg__"],
+    version = ":SkyComputerUseClientVersion",
+    deps = [":SkyComputerUseClientSources"],
+)

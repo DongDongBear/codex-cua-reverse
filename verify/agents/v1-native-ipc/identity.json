@@ -1,0 +1,14 @@
+{
+  "ts": "2026-09-10T11:01:44Z",
+  "sock": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+  "sock_mode": "0o140600",
+  "sock_uid": 501,
+  "sock_gid": 20,
+  "service_ps": "3802  3579 dongdong S    /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService",
+  "pgrep": "3802 /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService\n41872 /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient mcp",
+  "lsof_sock": "COMMAND    PID     USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nSkyComput 3802 dongdong    8u  unix 0xb6626e92561bd61e      0t0      /Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+  "fnm_node": "/opt/homebrew/bin/node\nv22.23.1\nIdentifier=node-555549442b6a48c483b430f68d8c439c2d4e48b8\nTeamIdentifier=not set\n",
+  "cua_node": "Identifier=node\nTeamIdentifier=2DC432GLL2\nv24.20.0\n",
+  "client_codesign": "Identifier=com.openai.sky.CUAService.cli\nFormat=app bundle with Mach-O thin (arm64)\nAuthority=Developer ID Application: OpenAI OpCo, LLC (2DC432GLL2)\nTeamIdentifier=2DC432GLL2\n",
+  "service_codesign": "Identifier=com.openai.sky.CUAService\nTeamIdentifier=2DC432GLL2\n"
+}

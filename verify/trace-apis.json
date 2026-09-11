@@ -1,0 +1,205 @@
+{
+  "total_js_events": 39,
+  "with_code": 37,
+  "unnamed_question_duplicates": 2,
+  "apis": [
+    {
+      "name": "app.click",
+      "count": 14,
+      "example": {
+        "code": "await linearApp.click([119,35]); await linearApp.getAXStateAndScreenshot();",
+        "title": "打开 issue 创建窗口",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "tab.getAXState",
+      "count": 12,
+      "example": {
+        "code": "await tab.click(325); await tab.getAXState();",
+        "title": "测试空表单提交校验",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "tab.click",
+      "count": 11,
+      "example": {
+        "code": "await tab.click(325); await tab.getAXState();",
+        "title": "测试空表单提交校验",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "nodeRepl.write",
+      "count": 10,
+      "example": {
+        "code": "let pt = await browser.tabs.get(\"1\"); nodeRepl.write(await pt.dev.logs({levels:[\"log\"],limit:5})); await tab.click(349); await tab.getAXState();",
+        "title": "确认提交回调并测试自动填充",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "app.getAXState",
+      "count": 9,
+      "example": {
+        "code": "await linearApp.performSecondaryAction(0,\"Raise\"); await linearApp.getAXState();",
+        "title": "显示 Linear 窗口",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "app.getAXStateAndScreenshot",
+      "count": 8,
+      "example": {
+        "code": "await linearApp.performSecondaryAction(4,\"zoom the window\"); await linearApp.getAXStateAndScreenshot();",
+        "title": "展开 Linear 以创建测试 issue",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "tab.playwright.locator",
+      "count": 7,
+      "example": {
+        "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').fill('测试 Alice'); await pt.playwright.locator('[id=\"validateOnly_age\"]').fill('28'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|button.*Submit/.test(x)).join('\\n'));",
+        "title": "测试填写后启用 Submit",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "cua.getApp",
+      "count": 4,
+      "example": {
+        "code": "let linearApp = await cua.getApp(\"Linear\");",
+        "title": "打开电脑上的 Linear",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "app.pressKey",
+      "count": 3,
+      "example": {
+        "code": "await linearApp.pressKey('c'); await linearApp.getAXStateAndScreenshot();",
+        "title": "新建 Linear issue",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "browser.browserId",
+      "count": 2,
+      "example": {
+        "code": "await cua.listTabs({browser:browser.browserId});",
+        "title": "找到当前表单标签页",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "tab.typeText",
+      "count": 2,
+      "example": {
+        "code": "await tab.click(4523); await tab.typeText(\"测试用户_Test123\"); await tab.click(4528); await tab.typeText(\"DemoOnly!123\"); await tab.click(323); await tab.click(325); await tab.getAXState();",
+        "title": "输入测试字符并提交基础表单",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "app.performSecondaryAction",
+      "count": 2,
+      "example": {
+        "code": "await linearApp.performSecondaryAction(0,\"Raise\"); await linearApp.getAXState();",
+        "title": "显示 Linear 窗口",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "app.typeText",
+      "count": 2,
+      "example": {
+        "code": "await linearApp.pressKey('super+space'); await linearApp.typeText('Linear'); await linearApp.pressKey('Return'); await linearApp.getAXStateAndScreenshot();",
+        "title": "通过系统搜索打开 Linear",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "app.setValue",
+      "count": 2,
+      "example": {
+        "code": "await linear.setValue(128,'补充 Ant Design Form 组件交互测试'); await linear.setValue(130,'测试页面：https://ant.design/components/form\\n\\n已测：基础表单空提交校验、中英文输入后成功回调、Remember me 切换、自动填充、下拉联动、Reset、提交按钮启用条件、Watch Hooks 实时更新。第一轮未发现功能异常。\\n\\n待补测：动态表单项增删及嵌套输入；日期、时间、数字及下拉控件；禁用状态；弹窗表单；字段依赖与错误定位。\\n\\n验收：记录操作步骤、预期与实际结果，异常附复现步骤。'); await linear.getAXState();",
+        "title": "修正并验证 issue 文本",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "cua.getBrowser",
+      "count": 1,
+      "example": {
+        "code": "let browser = await cua.getBrowser({ url: \"https://ant.design/components/form\" });",
+        "title": "查看 Ant Design 表单页面",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "cua.listTabs",
+      "count": 1,
+      "example": {
+        "code": "await cua.listTabs({browser:browser.browserId});",
+        "title": "找到当前表单标签页",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "cua.getTab",
+      "count": 1,
+      "example": {
+        "code": "let tab = await cua.getTab(\"1\", {browser:browser.browserId});",
+        "title": "读取表单控件",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "browser.tabs.get",
+      "count": 1,
+      "example": {
+        "code": "let pt = await browser.tabs.get(\"1\"); nodeRepl.write(await pt.dev.logs({levels:[\"log\"],limit:5})); await tab.click(349); await tab.getAXState();",
+        "title": "确认提交回调并测试自动填充",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "tab.dev.logs",
+      "count": 1,
+      "example": {
+        "code": "let pt = await browser.tabs.get(\"1\"); nodeRepl.write(await pt.dev.logs({levels:[\"log\"],limit:5})); await tab.click(349); await tab.getAXState();",
+        "title": "确认提交回调并测试自动填充",
+        "session": "task-1-ant-design-form"
+      }
+    },
+    {
+      "name": "app.getScreenshot",
+      "count": 1,
+      "example": {
+        "code": "await linearApp.getScreenshot();",
+        "title": "查看 Linear 当前界面",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "cua.listApps",
+      "count": 1,
+      "example": {
+        "code": "await cua.listApps();",
+        "title": "检查 Linear 窗口连接",
+        "session": "task-2-linear-issue"
+      }
+    },
+    {
+      "name": "app.paste",
+      "count": 1,
+      "example": {
+        "code": "await linear.click(127); await linear.typeText('补充 Ant Design Form 组件交互测试'); await linear.click(128); await linear.paste('测试页面：https://ant.design/components/form\\n\\n已完成第一轮交互测试：\\n- 基础表单：空提交显示必填提示；输入中英文和测试密码后触发成功回调。\\n- Remember me 复选框可切换。\\n- Fill form 自动填充、Gender 选择联动 Note、Reset 清空正常。\\n- Validate Only：填写 Name、Age 后 Submit 启用；键盘删除 Name 后禁用。\\n- Watch Hooks：中英文和数字输入后，显示值同步更新。\\n\\n待补测范围：\\n- 动态表单项的新增、删除及嵌",
+        "title": "填写测试范围并核对负责人",
+        "session": "task-2-linear-issue"
+      }
+    }
+  ]
+}

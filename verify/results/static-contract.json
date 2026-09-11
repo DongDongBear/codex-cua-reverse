@@ -1,0 +1,203 @@
+{
+  "ts": "2026-09-10T10:54:01.115Z",
+  "total": 22,
+  "ok": 22,
+  "unknown": 0,
+  "failed": 0,
+  "results": [
+    {
+      "name": "app.click",
+      "count": 14,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppPerformActionRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "tab.getAXState",
+      "count": 12,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "tab.click",
+      "count": 11,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "nodeRepl.write",
+      "count": 10,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.getAXState",
+      "count": 9,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppGetSkyshotRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.getAXStateAndScreenshot",
+      "count": 8,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppGetSkyshotRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "tab.playwright.locator",
+      "count": 7,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "cua.getApp",
+      "count": 4,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppGetSkyshotRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.pressKey",
+      "count": 3,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppPerformActionRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "browser.browserId",
+      "ok": true,
+      "note": "property, not a call"
+    },
+    {
+      "name": "tab.typeText",
+      "count": 2,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.performSecondaryAction",
+      "count": 2,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppPerformActionRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.typeText",
+      "count": 2,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppPerformActionRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.setValue",
+      "count": 2,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppPerformActionRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "cua.getBrowser",
+      "count": 1,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "cua.listTabs",
+      "count": 1,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "cua.getTab",
+      "count": 1,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "browser.tabs.get",
+      "count": 1,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "tab.dev.logs",
+      "count": 1,
+      "typeOk": true,
+      "ipc": null,
+      "ipcOk": null,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.getScreenshot",
+      "count": 1,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppGetSkyshotRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "cua.listApps",
+      "count": 1,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCListAppsRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    },
+    {
+      "name": "app.paste",
+      "count": 1,
+      "typeOk": true,
+      "ipc": "ComputerUseIPCAppPerformActionRequest",
+      "ipcOk": true,
+      "ok": true,
+      "unknown": false
+    }
+  ]
+}

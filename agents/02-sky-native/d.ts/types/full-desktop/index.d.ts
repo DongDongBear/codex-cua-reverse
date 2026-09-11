@@ -1,0 +1,14 @@
+export type * from "./Audio";
+export type * from "./Options";
+export type * from "./Screenshot";
+export type * as Click from "./Click";
+export type * as Drag from "./Drag";
+export type * as DragHandle from "./DragHandle";
+export type * as GetScreenshot from "./GetScreenshot";
+export type * as Move from "./Move";
+export type * as PressKey from "./PressKey";
+export type * as Scroll from "./Scroll";
+export type * as StartAudioRecording from "./StartAudioRecording";
+export type * as StopAudioRecording from "./StopAudioRecording";
+export type * as TypeText from "./TypeText";
+export type { FullDesktopComputerUseClient as Client } from "./FullDesktopComputerUseClient";

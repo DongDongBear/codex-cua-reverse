@@ -1,0 +1,38 @@
+# MCP tools advertised by cua_node/bin/node_repl (live tools/list).
+# There is no tool named js_add — that was a strings prefix of js_add_node_module_dir.
+
+js
+js_add_node_module_dir
+js_reset
+turn_ended
+
+# js fields: code (required), title? (maxLength 80), timeout_ms? (integer min 1, default 30000)
+# js_add_node_module_dir fields: path (absolute node_modules dir; survives js_reset)
+# js_reset fields: {}
+# turn_ended fields: hook_event_name, session_id, turn_id (all minLength 1)
+
+# untrusted nodeRepl (createNodeReplBridge)
+nodeRepl.cwd
+nodeRepl.emitAudio
+nodeRepl.emitImage
+nodeRepl.env
+nodeRepl.homeDir
+nodeRepl.requestMeta
+nodeRepl.rpc
+nodeRepl.tmpDir
+nodeRepl.write
+
+# trusted-only (createPrivilegedWorkerRuntime → trusted-worker.js)
+nodeRepl.addAfterSubmittedCodeHook
+nodeRepl.addTurnEndedHandler
+nodeRepl.config
+nodeRepl.createElicitation
+nodeRepl.emitContentItem
+nodeRepl.fetch
+nodeRepl.gaasBrowserConfig
+nodeRepl.launchServices
+nodeRepl.nativePipe
+nodeRepl.otel
+nodeRepl.setResponseMeta
+nodeRepl.telemetry
+nodeRepl.withSuspendedTimeout

@@ -1,0 +1,398 @@
+{
+  "calls": 14,
+  "rows": [
+    {
+      "i": 1,
+      "title": "查看 Ant Design 表单页面",
+      "api": "cua.getBrowser",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 2,
+      "title": "找到当前表单标签页",
+      "api": "cua.listTabs",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 2,
+      "title": "找到当前表单标签页",
+      "api": "browser.browserId",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 3,
+      "title": "读取表单控件",
+      "api": "cua.getTab",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 3,
+      "title": "读取表单控件",
+      "api": "browser.browserId",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 4,
+      "title": "测试空表单提交校验",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 4,
+      "title": "测试空表单提交校验",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 5,
+      "title": "输入测试字符并提交基础表单",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 5,
+      "title": "输入测试字符并提交基础表单",
+      "api": "tab.typeText",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 5,
+      "title": "输入测试字符并提交基础表单",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 5,
+      "title": "输入测试字符并提交基础表单",
+      "api": "tab.typeText",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 5,
+      "title": "输入测试字符并提交基础表单",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 5,
+      "title": "输入测试字符并提交基础表单",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 5,
+      "title": "输入测试字符并提交基础表单",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 6,
+      "title": "确认提交回调并测试自动填充",
+      "api": "browser.tabs.get",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 6,
+      "title": "确认提交回调并测试自动填充",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 6,
+      "title": "确认提交回调并测试自动填充",
+      "api": "pt.dev.logs",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 6,
+      "title": "确认提交回调并测试自动填充",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 6,
+      "title": "确认提交回调并测试自动填充",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 7,
+      "title": "测试下拉选择选项",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 7,
+      "title": "测试下拉选择选项",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 8,
+      "title": "确认选择性别后的输入联动",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 8,
+      "title": "确认选择性别后的输入联动",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 8,
+      "title": "确认选择性别后的输入联动",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 9,
+      "title": "测试提交及 Reset 清空",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 9,
+      "title": "测试提交及 Reset 清空",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 9,
+      "title": "测试提交及 Reset 清空",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 9,
+      "title": "测试提交及 Reset 清空",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 10,
+      "title": "测试填写后启用 Submit",
+      "api": "pt.playwright.locator",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 10,
+      "title": "测试填写后启用 Submit",
+      "api": "pt.playwright.locator",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 10,
+      "title": "测试填写后启用 Submit",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 10,
+      "title": "测试填写后启用 Submit",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 11,
+      "title": "点击已启用的提交按钮",
+      "api": "tab.click",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 11,
+      "title": "点击已启用的提交按钮",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 11,
+      "title": "点击已启用的提交按钮",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 12,
+      "title": "验证清空后禁用和实时值更新",
+      "api": "pt.playwright.locator",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 12,
+      "title": "验证清空后禁用和实时值更新",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 12,
+      "title": "验证清空后禁用和实时值更新",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 12,
+      "title": "验证清空后禁用和实时值更新",
+      "api": "pt.playwright.locator",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 12,
+      "title": "验证清空后禁用和实时值更新",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 12,
+      "title": "验证清空后禁用和实时值更新",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 13,
+      "title": "核实清空后的按钮状态",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 13,
+      "title": "核实清空后的按钮状态",
+      "api": "pt.playwright.locator",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 13,
+      "title": "核实清空后的按钮状态",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 13,
+      "title": "核实清空后的按钮状态",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    },
+    {
+      "i": 14,
+      "title": "用键盘删除内容测试必填条件",
+      "api": "pt.playwright.locator",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 14,
+      "title": "用键盘删除内容测试必填条件",
+      "api": "pt.playwright.locator",
+      "ok": true,
+      "tinysky": false,
+      "api.json": true
+    },
+    {
+      "i": 14,
+      "title": "用键盘删除内容测试必填条件",
+      "api": "nodeRepl.write",
+      "ok": true,
+      "tinysky": true,
+      "api.json": true
+    },
+    {
+      "i": 14,
+      "title": "用键盘删除内容测试必填条件",
+      "api": "tab.getAXState",
+      "ok": true,
+      "tinysky": true,
+      "api.json": false
+    }
+  ],
+  "failed": []
+}

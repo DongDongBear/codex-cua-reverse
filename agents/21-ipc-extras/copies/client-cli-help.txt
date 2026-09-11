@@ -1,0 +1,81 @@
+==== cua --help ====
+USAGE: cua <subcommand>
+
+OPTIONS:
+  -h, --help              Show help information.
+
+SUBCOMMANDS:
+  mcp                     Runs the Computer Use client as an MCP server
+  event-stream
+  computer-history
+  calendar
+  messages
+  turn-ended              Handles a Codex turn-ended notification
+
+  See 'cua help <subcommand>' for detailed help.
+
+==== cua messages --help ====
+USAGE: cua messages <subcommand>
+
+OPTIONS:
+  -h, --help              Show help information.
+
+SUBCOMMANDS:
+  mcp                     Runs the Messages client as an MCP server
+
+  See 'cua help messages <subcommand>' for detailed help.
+
+==== cua calendar --help ====
+USAGE: cua calendar <subcommand>
+
+OPTIONS:
+  -h, --help              Show help information.
+
+SUBCOMMANDS:
+  mcp                     Runs the Calendar client as an MCP server
+
+  See 'cua help calendar <subcommand>' for detailed help.
+
+==== cua computer-history --help ====
+USAGE: cua computer-history <subcommand>
+
+OPTIONS:
+  -h, --help              Show help information.
+
+SUBCOMMANDS:
+  mcp                     Runs the Computer History client as an MCP server
+
+  See 'cua help computer-history <subcommand>' for detailed help.
+
+==== cua event-stream --help ====
+USAGE: cua event-stream <subcommand>
+
+OPTIONS:
+  -h, --help              Show help information.
+
+SUBCOMMANDS:
+  mcp                     Runs the Record & Replay client as an MCP server
+
+  See 'cua help event-stream <subcommand>' for detailed help.
+
+==== cua mcp --help ====
+OVERVIEW: Runs the Computer Use client as an MCP server
+
+USAGE: cua mcp
+
+OPTIONS:
+  -h, --help              Show help information.
+
+
+==== cua turn-ended --help ====
+OVERVIEW: Handles a Codex turn-ended notification
+
+USAGE: cua turn-ended [--previous-notify <previous-notify>] <payload>
+
+ARGUMENTS:
+  <payload>
+
+OPTIONS:
+  --previous-notify <previous-notify>
+  -h, --help              Show help information.
+

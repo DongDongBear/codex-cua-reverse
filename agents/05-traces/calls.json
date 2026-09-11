@@ -1,0 +1,1552 @@
+{
+  "sources": {
+    "websocket": [
+      "/Users/dongdong/Desktop/codex-traffic/2026-09-10/0127_WS_backend-api_codex_responses/websocket.jsonl",
+      "/Users/dongdong/Desktop/codex-traffic/2026-09-10/0223_WS_backend-api_codex_responses/websocket.jsonl"
+    ],
+    "traces_crosscheck": [
+      "/Users/dongdong/Desktop/codex-cua-reverse/traces/all-js-calls.json",
+      "/Users/dongdong/Desktop/codex-cua-reverse/traces/task-1-ant-design-form.json",
+      "/Users/dongdong/Desktop/codex-cua-reverse/traces/task-2-linear-issue.json"
+    ]
+  },
+  "parse": {
+    "method": "Every jsonl line decoded. Function calls reconstructed from response.output_item.added/done + response.function_call_arguments.done. Arguments also concatenated from all deltas and compared to done (all matched).",
+    "exec_invocations": 0,
+    "sky_invocations": 0,
+    "sessions": {
+      "task-1-ant-design-form": {
+        "capture": "0127_WS_backend-api_codex_responses",
+        "lines": 1265,
+        "up": 16,
+        "down": 1249,
+        "response_create": 16,
+        "function_call_items": 14,
+        "js": 14,
+        "exec": 0,
+        "event_types": {
+          "response.create": 16,
+          "codex.rate_limits": 16,
+          "codex.response.metadata": 16,
+          "response.created": 16,
+          "response.in_progress": 16,
+          "responsesapi.websocket_timing": 16,
+          "response.completed": 16,
+          "response.output_item.added": 21,
+          "response.content_part.added": 3,
+          "response.output_text.delta": 224,
+          "response.output_text.done": 3,
+          "response.content_part.done": 3,
+          "response.output_item.done": 21,
+          "response.function_call_arguments.delta": 864,
+          "response.function_call_arguments.done": 14
+        },
+        "user": "我在右侧的浏览器打开了 ant design 的 form 页面，请你帮我测试一下这些组件的可用性（输入字符 按一下 submit 这些） 请你开始"
+      },
+      "task-2-linear-issue": {
+        "capture": "0223_WS_backend-api_codex_responses",
+        "lines": 1624,
+        "up": 27,
+        "down": 1597,
+        "response_create": 27,
+        "function_call_items": 25,
+        "js": 23,
+        "js_reset": 1,
+        "request_user_input_async": 1,
+        "exec": 0,
+        "event_types": {
+          "response.create": 27,
+          "codex.rate_limits": 27,
+          "codex.response.metadata": 27,
+          "response.created": 27,
+          "response.in_progress": 27,
+          "response.output_item.added": 40,
+          "response.output_item.done": 40,
+          "response.content_part.added": 5,
+          "response.output_text.delta": 221,
+          "response.output_text.done": 5,
+          "response.content_part.done": 5,
+          "response.function_call_arguments.delta": 1094,
+          "response.function_call_arguments.done": 25,
+          "responsesapi.websocket_timing": 27,
+          "response.completed": 27
+        },
+        "user": "操作我电脑上的 linear 应用建一个 issue 指给我"
+      }
+    },
+    "schema_tools_advertised": [
+      "exec",
+      "wait",
+      "request_user_input",
+      "request_user_input_async",
+      "sleep",
+      "followup_task",
+      "interrupt_agent",
+      "list_agents",
+      "send_message",
+      "spawn_agent",
+      "wait_agent",
+      "js",
+      "js_reset"
+    ],
+    "js_parameters": [
+      "code",
+      "title",
+      "timeout_ms"
+    ],
+    "timeout_ms_used": false
+  },
+  "crosscheck_vs_traces": {
+    "item_id_set_equal": true,
+    "js_code_and_title_equal": true,
+    "js_call_id_equal": true,
+    "disagreements": [
+      {
+        "item_id": "fc_05a61cc4349bad21016aa280a05f0487d081bb1e09838a7da0",
+        "traces": {
+          "name": "js?",
+          "call_id": null,
+          "event": "response.function_call_arguments.done",
+          "ts": "2026-09-10T10:04:17.965Z"
+        },
+        "websocket": {
+          "name": "request_user_input_async",
+          "call_id": "call_8ttSMORM5eSYvZywmZv8VPhP",
+          "event": "response.output_item.done",
+          "ts": "2026-09-10T10:04:17.965Z"
+        },
+        "why": "function_call_arguments.done has no name/call_id fields; traces guessed js?. output_item.done names the tool."
+      },
+      {
+        "item_id": "fc_05a61cc4349bad21016aa280f6cf9887d08fe9980781dc6353",
+        "traces": {
+          "name": "js?",
+          "call_id": null,
+          "event": "response.function_call_arguments.done",
+          "ts": "2026-09-10T10:05:42.847Z",
+          "args": {}
+        },
+        "websocket": {
+          "name": "js_reset",
+          "call_id": "call_cz8IXBshRbd0EthRf9w7Y2xW",
+          "event": "response.output_item.done",
+          "ts": "2026-09-10T10:05:42.848Z",
+          "args": {}
+        },
+        "why": "same as above. traces used args.done timestamp (1ms earlier than output_item.done)."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "n": 1,
+      "n_in_session": 1,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "查看 Ant Design 表单页面",
+      "code": "let browser = await cua.getBrowser({ url: \"https://ant.design/components/form\" });",
+      "apis": [
+        "cua.getBrowser"
+      ],
+      "observed_apis": [
+        "cua.getBrowser"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_L5p0JtR28cUwYwLPKIq1YonC",
+      "item_id": "fc_05a61cc4349bad21016aa26890d22c87d0ab3d38bdb9180aa6",
+      "ts": "2026-09-10T08:21:37.934Z",
+      "ts_added": "2026-09-10T08:21:36.896Z",
+      "args": {
+        "code": "let browser = await cua.getBrowser({ url: \"https://ant.design/components/form\" });",
+        "title": "查看 Ant Design 表单页面"
+      },
+      "result": "first-use CUA docs (~50k); REPL binds `browser`. Selecting a browser does not open a tab.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 32,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 2,
+      "n_in_session": 2,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "找到当前表单标签页",
+      "code": "await cua.listTabs({browser:browser.browserId});",
+      "apis": [
+        "cua.listTabs"
+      ],
+      "observed_apis": [
+        "cua.listTabs"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_ZadPs7v59UMruvLQA0CdL4sE",
+      "item_id": "fc_05a61cc4349bad21016aa26897c03887d0b56f59c2200da5cb",
+      "ts": "2026-09-10T08:21:45.520Z",
+      "ts_added": "2026-09-10T08:21:43.790Z",
+      "args": {
+        "code": "await cua.listTabs({browser:browser.browserId});",
+        "title": "找到当前表单标签页"
+      },
+      "result": "[{\"id\":\"1\",\"providerTabId\":\"e118c787-0c80-43ff-b884-63d7e1235315\",\"title\":\"Form - Ant Design\",\"url\":\"https://ant.design/components/form\",\"browserId\":\"1\"}]",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 24,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 3,
+      "n_in_session": 3,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "读取表单控件",
+      "code": "let tab = await cua.getTab(\"1\", {browser:browser.browserId});",
+      "apis": [
+        "cua.getTab"
+      ],
+      "observed_apis": [
+        "cua.getTab"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_ubx0Uvj0gW7qFmrNzSMmo1Uv",
+      "item_id": "fc_05a61cc4349bad21016aa2689cf7d487d096868e5885cf68d9",
+      "ts": "2026-09-10T08:21:50.003Z",
+      "ts_added": "2026-09-10T08:21:48.982Z",
+      "args": {
+        "code": "let tab = await cua.getTab(\"1\", {browser:browser.browserId});",
+        "title": "读取表单控件"
+      },
+      "result": "claimed IAB tab 1; dumped full AX tree (~119k) for Form - Ant Design.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 29,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 4,
+      "n_in_session": 4,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "测试空表单提交校验",
+      "code": "await tab.click(325); await tab.getAXState();",
+      "apis": [
+        "tab.click",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "tab.click",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_F4uUYfYoeP8bXeqe7xj85KEG",
+      "item_id": "fc_05a61cc4349bad21016aa268a3e55487d097df55ed6a06100b",
+      "ts": "2026-09-10T08:21:57.165Z",
+      "ts_added": "2026-09-10T08:21:56.013Z",
+      "args": {
+        "code": "await tab.click(325); await tab.getAXState();",
+        "title": "测试空表单提交校验"
+      },
+      "result": "AX diff after empty submit (validation).",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 26,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 5,
+      "n_in_session": 5,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "输入测试字符并提交基础表单",
+      "code": "await tab.click(4523); await tab.typeText(\"测试用户_Test123\"); await tab.click(4528); await tab.typeText(\"DemoOnly!123\"); await tab.click(323); await tab.click(325); await tab.getAXState();",
+      "apis": [
+        "tab.click",
+        "tab.typeText",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "tab.click",
+        "tab.typeText",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_kXnXtlEF9NJEgbv99e5MyCKK",
+      "item_id": "fc_05a61cc4349bad21016aa268aa980087d0ad52b2f88720cd6e",
+      "ts": "2026-09-10T08:22:04.862Z",
+      "ts_added": "2026-09-10T08:22:02.671Z",
+      "args": {
+        "code": "await tab.click(4523); await tab.typeText(\"测试用户_Test123\"); await tab.click(4528); await tab.typeText(\"DemoOnly!123\"); await tab.click(323); await tab.click(325); await tab.getAXState();",
+        "title": "输入测试字符并提交基础表单"
+      },
+      "result": "AX diff after fill+submit (success callback).",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 69,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 6,
+      "n_in_session": 6,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "确认提交回调并测试自动填充",
+      "code": "let pt = await browser.tabs.get(\"1\"); nodeRepl.write(await pt.dev.logs({levels:[\"log\"],limit:5})); await tab.click(349); await tab.getAXState();",
+      "apis": [
+        "browser.tabs.get",
+        "nodeRepl.write",
+        "tab.dev.logs",
+        "tab.click",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "browser.tabs.get",
+        "nodeRepl.write",
+        "pt.dev.logs",
+        "tab.click",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_dEw4JndQkLuX8yqvU36cDC8v",
+      "item_id": "fc_05a61cc4349bad21016aa268b25f8887d0854b7abab9b8f4f0",
+      "ts": "2026-09-10T08:22:12.308Z",
+      "ts_added": "2026-09-10T08:22:10.391Z",
+      "args": {
+        "code": "let pt = await browser.tabs.get(\"1\"); nodeRepl.write(await pt.dev.logs({levels:[\"log\"],limit:5})); await tab.click(349); await tab.getAXState();",
+        "title": "确认提交回调并测试自动填充"
+      },
+      "result": "console logs + AX diff after Fill form click.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 59,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 7,
+      "n_in_session": 7,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "测试下拉选择选项",
+      "code": "await tab.click(344); await tab.getAXState();",
+      "apis": [
+        "tab.click",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "tab.click",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_UPYTMdKeN0YhnKPtPqFNxIPt",
+      "item_id": "fc_05a61cc4349bad21016aa268b9031887d08eea3d971f8207e0",
+      "ts": "2026-09-10T08:22:18.007Z",
+      "ts_added": "2026-09-10T08:22:17.037Z",
+      "args": {
+        "code": "await tab.click(344); await tab.getAXState();",
+        "title": "测试下拉选择选项"
+      },
+      "result": "full AX dump (~119k) after opening Gender select.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 25,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 8,
+      "n_in_session": 8,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "确认选择性别后的输入联动",
+      "code": "await tab.click(4531); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Note|hello|Hello|female|Gender|340/.test(x)).join('\\n'));",
+      "apis": [
+        "tab.click",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "tab.click",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_XPsviJ0LZNLTllylvqVzcG4Z",
+      "item_id": "fc_05a61cc4349bad21016aa268c496bc87d0962d294112409c15",
+      "ts": "2026-09-10T08:22:30.729Z",
+      "ts_added": "2026-09-10T08:22:28.638Z",
+      "args": {
+        "code": "await tab.click(4531); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Note|hello|Hello|female|Gender|340/.test(x)).join('\\n'));",
+        "title": "确认选择性别后的输入联动"
+      },
+      "result": "filtered AX: Note value \"Hi, lady!\" after choosing female.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 64,
+        "args_match_deltas": true,
+        "output_index": 2
+      }
+    },
+    {
+      "n": 9,
+      "n_in_session": 9,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "测试提交及 Reset 清空",
+      "code": "await tab.click(350); await tab.click(351); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Note|option|Gender|340/.test(x)).join('\\n'));",
+      "apis": [
+        "tab.click",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "tab.click",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_vUY0Vx1Re12kkEztNnBv3AFJ",
+      "item_id": "fc_05a61cc4349bad21016aa268cbb8b487d09b5715a5a6af62ad",
+      "ts": "2026-09-10T08:22:37.916Z",
+      "ts_added": "2026-09-10T08:22:35.746Z",
+      "args": {
+        "code": "await tab.click(350); await tab.click(351); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Note|option|Gender|340/.test(x)).join('\\n'));",
+        "title": "测试提交及 Reset 清空"
+      },
+      "result": "filtered AX after submit+reset.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 63,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 10,
+      "n_in_session": 10,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "测试填写后启用 Submit",
+      "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').fill('测试 Alice'); await pt.playwright.locator('[id=\"validateOnly_age\"]').fill('28'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|button.*Submit/.test(x)).join('\\n'));",
+      "apis": [
+        "tab.playwright.locator",
+        "tab.playwright.locator.fill",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "pt.playwright.locator",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_VfRcedGPXnBSz9YHs5dNJwUG",
+      "item_id": "fc_05a61cc4349bad21016aa268d3aca487d08c6ff8a0eb87d3dd",
+      "ts": "2026-09-10T08:22:46.401Z",
+      "ts_added": "2026-09-10T08:22:43.691Z",
+      "args": {
+        "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').fill('测试 Alice'); await pt.playwright.locator('[id=\"validateOnly_age\"]').fill('28'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|button.*Submit/.test(x)).join('\\n'));",
+        "title": "测试填写后启用 Submit"
+      },
+      "result": "Name/Age filled; Submit enabled (index 896).",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 87,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 11,
+      "n_in_session": 11,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "点击已启用的提交按钮",
+      "code": "await tab.click(896); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Reset|Submit/.test(x)).join('\\n'));",
+      "apis": [
+        "tab.click",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "tab.click",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_9y2Jy5aafnIMSuG9aR2193J4",
+      "item_id": "fc_05a61cc4349bad21016aa268da2e6087d081002e350f51c219",
+      "ts": "2026-09-10T08:22:52.577Z",
+      "ts_added": "2026-09-10T08:22:50.196Z",
+      "args": {
+        "code": "await tab.click(896); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Reset|Submit/.test(x)).join('\\n'));",
+        "title": "点击已启用的提交按钮"
+      },
+      "result": "focused 896 button Submit.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 57,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 12,
+      "n_in_session": 12,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "验证清空后禁用和实时值更新",
+      "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').fill(''); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Submit/.test(x)).join('\\n')); await pt.playwright.locator('[id=\"name\"]').fill('中文测试 ABC 123'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Name Value|Custom Value|中文/.test(x)).join('\\n'));",
+      "apis": [
+        "tab.playwright.locator",
+        "tab.playwright.locator.fill",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "pt.playwright.locator",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_aMAHRSl7rlFLxj0z0yihBxbG",
+      "item_id": "fc_05a61cc4349bad21016aa268e171b487d0ada191cf45b69ea2",
+      "ts": "2026-09-10T08:23:01.649Z",
+      "ts_added": "2026-09-10T08:22:57.455Z",
+      "args": {
+        "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').fill(''); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Submit/.test(x)).join('\\n')); await pt.playwright.locator('[id=\"name\"]').fill('中文测试 ABC 123'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Name Value|Custom Value|中文/.test(x)).join('\\n'));",
+        "title": "验证清空后禁用和实时值更新"
+      },
+      "result": "validateOnly name still \"测试 Alice\"; Watch Hooks value \"中文测试 ABC 123\".",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 127,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 13,
+      "n_in_session": 13,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "核实清空后的按钮状态",
+      "code": "nodeRepl.write(await pt.playwright.locator('[id=\"validateOnly_name\"]').evaluate(el=>({value:el.value,buttons:Array.from(el.closest('form').querySelectorAll('button')).map(b=>({text:b.textContent,disabled:b.disabled}))}))); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Add field|dynamic_form_item|button.*Reset/.test(x)).join('\\n'));",
+      "apis": [
+        "nodeRepl.write",
+        "tab.playwright.locator",
+        "tab.playwright.locator.evaluate",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "nodeRepl.write",
+        "pt.playwright.locator",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_pAbvIYk9ixeXc49nqJjFNtVD",
+      "item_id": "fc_05a61cc4349bad21016aa268ec3bec87d0a5300d8a28204403",
+      "ts": "2026-09-10T08:23:11.931Z",
+      "ts_added": "2026-09-10T08:23:08.292Z",
+      "args": {
+        "code": "nodeRepl.write(await pt.playwright.locator('[id=\"validateOnly_name\"]').evaluate(el=>({value:el.value,buttons:Array.from(el.closest('form').querySelectorAll('button')).map(b=>({text:b.textContent,disabled:b.disabled}))}))); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/Add field|dynamic_form_item|button.*Reset/.test(x)).join('\\n'));",
+        "title": "核实清空后的按钮状态"
+      },
+      "result": "playwright evaluate: Submit/Reset enabled, value still 测试 Alice.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 111,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 14,
+      "n_in_session": 14,
+      "session": "task-1-ant-design-form",
+      "capture": "0127_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "用键盘删除内容测试必填条件",
+      "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').press('ControlOrMeta+a'); await pt.playwright.locator('[id=\"validateOnly_name\"]').press('Backspace'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Submit/.test(x)).join('\\n'));",
+      "apis": [
+        "tab.playwright.locator",
+        "tab.playwright.locator.press",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "observed_apis": [
+        "pt.playwright.locator",
+        "nodeRepl.write",
+        "tab.getAXState"
+      ],
+      "surface": "browser",
+      "primary": true,
+      "call_id": "call_S9eGWGThQGrAu2YaPmyinWmX",
+      "item_id": "fc_05a61cc4349bad21016aa268f4766487d09f920f73079e6dfc",
+      "ts": "2026-09-10T08:23:19.377Z",
+      "ts_added": "2026-09-10T08:23:16.510Z",
+      "args": {
+        "code": "await pt.playwright.locator('[id=\"validateOnly_name\"]').press('ControlOrMeta+a'); await pt.playwright.locator('[id=\"validateOnly_name\"]').press('Backspace'); nodeRepl.write((await tab.getAXState({emit:false})).split('\\n').filter(x=>/validateOnly|Submit/.test(x)).join('\\n'));",
+        "title": "用键盘删除内容测试必填条件"
+      },
+      "result": "Name cleared; Submit disabled (896).",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 91,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 15,
+      "n_in_session": 1,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "打开电脑上的 Linear",
+      "code": "let linearApp = await cua.getApp(\"Linear\");",
+      "apis": [
+        "cua.getApp"
+      ],
+      "observed_apis": [
+        "cua.getApp"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_7eBgRNiEijToCfzJrdbXJ9D1",
+      "item_id": "fc_05a61cc4349bad21016aa2809ae54487d09c55530ca5dfc4e7",
+      "ts": "2026-09-10T10:04:11.788Z",
+      "ts_added": "2026-09-10T10:04:10.847Z",
+      "args": {
+        "code": "let linearApp = await cua.getApp(\"Linear\");",
+        "title": "打开电脑上的 Linear"
+      },
+      "result": "bound Linear window \"YOU-24844 Sandbox\"; AX menu bar 0-13.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 23,
+        "args_match_deltas": true,
+        "output_index": 2
+      }
+    },
+    {
+      "n": 16,
+      "n_in_session": 2,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "request_user_input_async",
+      "title": null,
+      "code": null,
+      "apis": [],
+      "observed_apis": [],
+      "surface": null,
+      "primary": false,
+      "call_id": "call_8ttSMORM5eSYvZywmZv8VPhP",
+      "item_id": "fc_05a61cc4349bad21016aa280a05f0487d081bb1e09838a7da0",
+      "ts": "2026-09-10T10:04:17.965Z",
+      "ts_added": "2026-09-10T10:04:16.313Z",
+      "args": {
+        "questions": [
+          {
+            "title": "这个 issue 要记录什么？请给我标题或一句话描述；如果是接着刚才的测试，我可以建「补充 Ant Design Form 组件交互测试」，并指派给你。"
+          }
+        ]
+      },
+      "result": "{\"accepted\":true} then user answered 可以的",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 52,
+        "args_match_deltas": true,
+        "output_index": 0
+      },
+      "traces_label": "js?",
+      "traces_note": "traces/*.json labeled this function_call_arguments.done as name=js? with call_id=null; output_item.done has the real tool name and call_id."
+    },
+    {
+      "n": 17,
+      "n_in_session": 3,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "查看 Linear 当前界面",
+      "code": "await linearApp.getScreenshot();",
+      "apis": [
+        "app.getScreenshot"
+      ],
+      "observed_apis": [
+        "linearApp.getScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_mt4bGWYajFh94z9LU7AimQbC",
+      "item_id": "fc_05a61cc4349bad21016aa280a4096487d0b582bc385781d06e",
+      "ts": "2026-09-10T10:04:20.627Z",
+      "ts_added": "2026-09-10T10:04:20.016Z",
+      "args": {
+        "code": "await linearApp.getScreenshot();",
+        "title": "查看 Linear 当前界面"
+      },
+      "result": "screenshot of Linear (image part).",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 18,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 18,
+      "n_in_session": 4,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "显示 Linear 窗口",
+      "code": "await linearApp.performSecondaryAction(0,\"Raise\"); await linearApp.getAXState();",
+      "apis": [
+        "app.performSecondaryAction",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linearApp.performSecondaryAction",
+        "linearApp.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_SrK5LaMSBriPmXtBBFYoQk6m",
+      "item_id": "fc_05a61cc4349bad21016aa280a7983887d0bf0c2cc2fa55723b",
+      "ts": "2026-09-10T10:04:24.597Z",
+      "ts_added": "2026-09-10T10:04:23.547Z",
+      "args": {
+        "code": "await linearApp.performSecondaryAction(0,\"Raise\"); await linearApp.getAXState();",
+        "title": "显示 Linear 窗口"
+      },
+      "result": "Raise: no AX change.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 30,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 19,
+      "n_in_session": 5,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "展开 Linear 以创建测试 issue",
+      "code": "await linearApp.performSecondaryAction(4,\"zoom the window\"); await linearApp.getAXStateAndScreenshot();",
+      "apis": [
+        "app.performSecondaryAction",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linearApp.performSecondaryAction",
+        "linearApp.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_Q06vVWljqx4MxysBQMvceR8M",
+      "item_id": "fc_05a61cc4349bad21016aa280ac58b087d0a1f750d7be17f662",
+      "ts": "2026-09-10T10:04:29.541Z",
+      "ts_added": "2026-09-10T10:04:28.283Z",
+      "args": {
+        "code": "await linearApp.performSecondaryAction(4,\"zoom the window\"); await linearApp.getAXStateAndScreenshot();",
+        "title": "展开 Linear 以创建测试 issue"
+      },
+      "result": "zoom the window: no AX change + screenshot.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 37,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 20,
+      "n_in_session": 6,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "新建 Linear issue",
+      "code": "await linearApp.pressKey('c'); await linearApp.getAXStateAndScreenshot();",
+      "apis": [
+        "app.pressKey",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linearApp.pressKey",
+        "linearApp.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_gY3Vatk5iFOXqVFyHuXUHWlh",
+      "item_id": "fc_05a61cc4349bad21016aa280b1390c87d0a84a379cd24fb9db",
+      "ts": "2026-09-10T10:04:34.186Z",
+      "ts_added": "2026-09-10T10:04:33.161Z",
+      "args": {
+        "code": "await linearApp.pressKey('c'); await linearApp.getAXStateAndScreenshot();",
+        "title": "新建 Linear issue"
+      },
+      "result": "press c: no AX change + screenshot.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 28,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 21,
+      "n_in_session": 7,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "打开 issue 创建窗口",
+      "code": "await linearApp.click([119,35]); await linearApp.getAXStateAndScreenshot();",
+      "apis": [
+        "app.click",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linearApp.click",
+        "linearApp.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_jNO6ISaArW8EX2vLUddBELFC",
+      "item_id": "fc_05a61cc4349bad21016aa280b82d8887d0ab4f2046e13b6a21",
+      "ts": "2026-09-10T10:04:41.122Z",
+      "ts_added": "2026-09-10T10:04:40.124Z",
+      "args": {
+        "code": "await linearApp.click([119,35]); await linearApp.getAXStateAndScreenshot();",
+        "title": "打开 issue 创建窗口"
+      },
+      "result": "Computer Use server error -10005: noWindowsAvailable",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 29,
+        "args_match_deltas": true,
+        "output_index": 2
+      }
+    },
+    {
+      "n": 22,
+      "n_in_session": 8,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "检查 Linear 窗口连接",
+      "code": "await cua.listApps();",
+      "apis": [
+        "cua.listApps"
+      ],
+      "observed_apis": [
+        "cua.listApps"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_M6fCCal3FCFs5n2PRLBpNqy5",
+      "item_id": "fc_05a61cc4349bad21016aa280bb5e2087d09196a6552454068c",
+      "ts": "2026-09-10T10:04:43.965Z",
+      "ts_added": "2026-09-10T10:04:43.308Z",
+      "args": {
+        "code": "await cua.listApps();",
+        "title": "检查 Linear 窗口连接"
+      },
+      "result": "app inventory; Linear id=com.linear isRunning=true useCount=11.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 17,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 23,
+      "n_in_session": 9,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "重新连接 Linear 应用",
+      "code": "linearApp = await cua.getApp('com.linear');",
+      "apis": [
+        "cua.getApp"
+      ],
+      "observed_apis": [
+        "cua.getApp"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_SbcPbm4TDMO7ZJOS6TuwQsIx",
+      "item_id": "fc_05a61cc4349bad21016aa280bf097887d0835f4aa5e584c072",
+      "ts": "2026-09-10T10:04:47.781Z",
+      "ts_added": "2026-09-10T10:04:46.964Z",
+      "args": {
+        "code": "linearApp = await cua.getApp('com.linear');",
+        "title": "重新连接 Linear 应用"
+      },
+      "result": "rebound Linear via bundle id; same Sandbox window AX.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 23,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 24,
+      "n_in_session": 10,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "点击新建 issue",
+      "code": "await linearApp.click([119,35]); await linearApp.getAXStateAndScreenshot();",
+      "apis": [
+        "app.click",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linearApp.click",
+        "linearApp.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_DloWqijxmEuYTXFSyAtBK8q0",
+      "item_id": "fc_05a61cc4349bad21016aa280c517d087d0ac6d323415a73f13",
+      "ts": "2026-09-10T10:04:53.892Z",
+      "ts_added": "2026-09-10T10:04:53.020Z",
+      "args": {
+        "code": "await linearApp.click([119,35]); await linearApp.getAXStateAndScreenshot();",
+        "title": "点击新建 issue"
+      },
+      "result": "Computer Use server error -10005: noWindowsAvailable",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 29,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 25,
+      "n_in_session": 11,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "尝试通过菜单创建 issue",
+      "code": "await linearApp.click(8); await linearApp.getAXState();",
+      "apis": [
+        "app.click",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linearApp.click",
+        "linearApp.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_Kd9nkInvYJm2Wp60om43K6bM",
+      "item_id": "fc_05a61cc4349bad21016aa280ca1a0c87d0ae59fbe174ab8674",
+      "ts": "2026-09-10T10:04:58.955Z",
+      "ts_added": "2026-09-10T10:04:58.052Z",
+      "args": {
+        "code": "await linearApp.click(8); await linearApp.getAXState();",
+        "title": "尝试通过菜单创建 issue"
+      },
+      "result": "File menu open; New / Issue… visible.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 27,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 26,
+      "n_in_session": 12,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "从菜单新建 issue",
+      "code": "await linearApp.click(5); await linearApp.getAXStateAndScreenshot();",
+      "apis": [
+        "app.click",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linearApp.click",
+        "linearApp.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_d6XADtQa7FGZWXlSdMnSmWde",
+      "item_id": "fc_05a61cc4349bad21016aa280cd7c1c87d095ebba607e111ead",
+      "ts": "2026-09-10T10:05:02.839Z",
+      "ts_added": "2026-09-10T10:05:01.425Z",
+      "args": {
+        "code": "await linearApp.click(5); await linearApp.getAXStateAndScreenshot();",
+        "title": "从菜单新建 issue"
+      },
+      "result": "still Sandbox window AX + screenshot; composer not opened.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 28,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 27,
+      "n_in_session": 13,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "激活 Linear 应用",
+      "code": "linearApp = await cua.getApp('com.linear');",
+      "apis": [
+        "cua.getApp"
+      ],
+      "observed_apis": [
+        "cua.getApp"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_cp5Wcq4ysY9lqLBlf3Gcq6wK",
+      "item_id": "fc_05a61cc4349bad21016aa280ec521487d0a9e3e5c502184f89",
+      "ts": "2026-09-10T10:05:33.083Z",
+      "ts_added": "2026-09-10T10:05:32.277Z",
+      "args": {
+        "code": "linearApp = await cua.getApp('com.linear');",
+        "title": "激活 Linear 应用"
+      },
+      "result": "rebound com.linear; Sandbox window AX.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 23,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 28,
+      "n_in_session": 14,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "通过系统搜索打开 Linear",
+      "code": "await linearApp.pressKey('super+space'); await linearApp.typeText('Linear'); await linearApp.pressKey('Return'); await linearApp.getAXStateAndScreenshot();",
+      "apis": [
+        "app.pressKey",
+        "app.typeText",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linearApp.pressKey",
+        "linearApp.typeText",
+        "linearApp.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_41BKTBgXLBC0csekKrQOOZzW",
+      "item_id": "fc_05a61cc4349bad21016aa280f16f4887d0a909dc2fdf752f98",
+      "ts": "2026-09-10T10:05:38.943Z",
+      "ts_added": "2026-09-10T10:05:37.378Z",
+      "args": {
+        "code": "await linearApp.pressKey('super+space'); await linearApp.typeText('Linear'); await linearApp.pressKey('Return'); await linearApp.getAXStateAndScreenshot();",
+        "title": "通过系统搜索打开 Linear"
+      },
+      "result": "Spotlight sequence: no AX change + screenshot.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 47,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 29,
+      "n_in_session": 15,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js_reset",
+      "title": null,
+      "code": null,
+      "apis": [],
+      "observed_apis": [],
+      "surface": null,
+      "primary": false,
+      "call_id": "call_cz8IXBshRbd0EthRf9w7Y2xW",
+      "item_id": "fc_05a61cc4349bad21016aa280f6cf9887d08fe9980781dc6353",
+      "ts": "2026-09-10T10:05:42.848Z",
+      "ts_added": "2026-09-10T10:05:42.755Z",
+      "args": {},
+      "result": "js kernel reset (bindings discarded, apps/tabs not closed).",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 1,
+        "args_match_deltas": true,
+        "output_index": 1
+      },
+      "traces_label": "js?",
+      "traces_note": "traces/*.json labeled this function_call_arguments.done as name=js? with call_id=null; output_item.done has the real tool name and call_id."
+    },
+    {
+      "n": 30,
+      "n_in_session": 16,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "重新初始化 Linear 控制连接",
+      "code": "let linear = await cua.getApp('com.linear');",
+      "apis": [
+        "cua.getApp"
+      ],
+      "observed_apis": [
+        "cua.getApp"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_Q1P3YByOoYEqROmEqTr5gfot",
+      "item_id": "fc_05a61cc4349bad21016aa280f9902887d0b62e7d58493d8d36",
+      "ts": "2026-09-10T10:05:46.712Z",
+      "ts_added": "2026-09-10T10:05:45.494Z",
+      "args": {
+        "code": "let linear = await cua.getApp('com.linear');",
+        "title": "重新初始化 Linear 控制连接"
+      },
+      "result": "first-use docs again after reset; bound `linear` to Sandbox window.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 24,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 31,
+      "n_in_session": 17,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "打开 Linear 文件菜单",
+      "code": "await linear.click(8); await linear.getAXState();",
+      "apis": [
+        "app.click",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_nO3ToU1svBVvnVR92nYg3znt",
+      "item_id": "fc_05a61cc4349bad21016aa280fe0d4c87d0b294e311f22bd13d",
+      "ts": "2026-09-10T10:05:50.941Z",
+      "ts_added": "2026-09-10T10:05:49.996Z",
+      "args": {
+        "code": "await linear.click(8); await linear.getAXState();",
+        "title": "打开 Linear 文件菜单"
+      },
+      "result": "File menu; New / Issue…",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 23,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 32,
+      "n_in_session": 18,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "新开 Linear 窗口恢复操作",
+      "code": "await linear.click(9); await linear.getAXStateAndScreenshot();",
+      "apis": [
+        "app.click",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_cAbK6EdSIPBwjxE4Y0jQMAbD",
+      "item_id": "fc_05a61cc4349bad21016aa28102a8c887d0b3e055fa0e495a19",
+      "ts": "2026-09-10T10:05:55.619Z",
+      "ts_added": "2026-09-10T10:05:54.586Z",
+      "args": {
+        "code": "await linear.click(9); await linear.getAXStateAndScreenshot();",
+        "title": "新开 Linear 窗口恢复操作"
+      },
+      "result": "still Sandbox window.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 28,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 33,
+      "n_in_session": 19,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "查看窗口恢复选项",
+      "code": "await linear.click(13); await linear.getAXState();",
+      "apis": [
+        "app.click",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_vgbQWSmNMVuv8QNuM18iPcR1",
+      "item_id": "fc_05a61cc4349bad21016aa2810759bc87d09e025b74799cb490",
+      "ts": "2026-09-10T10:06:00.126Z",
+      "ts_added": "2026-09-10T10:05:59.289Z",
+      "args": {
+        "code": "await linear.click(13); await linear.getAXState();",
+        "title": "查看窗口恢复选项"
+      },
+      "result": "Window menu; switched context toward \"New chat\".",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 24,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 34,
+      "n_in_session": 20,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "将 Linear 所有窗口置前",
+      "code": "await linear.click(5); await linear.getAXStateAndScreenshot();",
+      "apis": [
+        "app.click",
+        "app.getAXStateAndScreenshot"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.getAXStateAndScreenshot"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_fhvjE5QfiRqMHCc7TlYN9FaR",
+      "item_id": "fc_05a61cc4349bad21016aa2810bffa487d08a6d2e7f0c6c169d",
+      "ts": "2026-09-10T10:06:04.864Z",
+      "ts_added": "2026-09-10T10:06:03.924Z",
+      "args": {
+        "code": "await linear.click(5); await linear.getAXStateAndScreenshot();",
+        "title": "将 Linear 所有窗口置前"
+      },
+      "result": "Window \"New chat\" HTML content linear.app/youmind/ + screenshot.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 28,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 35,
+      "n_in_session": 21,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "创建补充测试 issue",
+      "code": "await linear.click(20); await linear.getAXState();",
+      "apis": [
+        "app.click",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_aRM4Jbb8FQZiZA9eGukzAB3f",
+      "item_id": "fc_05a61cc4349bad21016aa281117f7087d08ec9b12e02d4e676",
+      "ts": "2026-09-10T10:06:10.268Z",
+      "ts_added": "2026-09-10T10:06:09.423Z",
+      "args": {
+        "code": "await linear.click(20); await linear.getAXState();",
+        "title": "创建补充测试 issue"
+      },
+      "result": "AX diff; composer likely opened (click 20).",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 24,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 36,
+      "n_in_session": 22,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "填写测试范围并核对负责人",
+      "code": "await linear.click(127); await linear.typeText('补充 Ant Design Form 组件交互测试'); await linear.click(128); await linear.paste('测试页面：https://ant.design/components/form\\n\\n已完成第一轮交互测试：\\n- 基础表单：空提交显示必填提示；输入中英文和测试密码后触发成功回调。\\n- Remember me 复选框可切换。\\n- Fill form 自动填充、Gender 选择联动 Note、Reset 清空正常。\\n- Validate Only：填写 Name、Age 后 Submit 启用；键盘删除 Name 后禁用。\\n- Watch Hooks：中英文和数字输入后，显示值同步更新。\\n\\n待补测范围：\\n- 动态表单项的新增、删除及嵌套输入。\\n- 日期、时间、数字、下拉等控件的输入与校验。\\n- 禁用状态、弹窗表单、字段依赖及错误定位。\\n\\n验收标准：记录各场景的操作步骤、预期与实际结果；如发现异常，附复现步骤。当前第一轮未发现组件功能异常，不代表整页已全部覆盖。',{format:'text'}); await linear.click(131); await linear.getAXState();",
+      "apis": [
+        "app.click",
+        "app.typeText",
+        "app.paste",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.typeText",
+        "linear.paste",
+        "linear.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_yorCS7HChcmH1XcOnOJjxS3U",
+      "item_id": "fc_05a61cc4349bad21016aa2811603e887d0ab15f402aab13300",
+      "ts": "2026-09-10T10:06:23.163Z",
+      "ts_added": "2026-09-10T10:06:13.961Z",
+      "args": {
+        "code": "await linear.click(127); await linear.typeText('补充 Ant Design Form 组件交互测试'); await linear.click(128); await linear.paste('测试页面：https://ant.design/components/form\\n\\n已完成第一轮交互测试：\\n- 基础表单：空提交显示必填提示；输入中英文和测试密码后触发成功回调。\\n- Remember me 复选框可切换。\\n- Fill form 自动填充、Gender 选择联动 Note、Reset 清空正常。\\n- Validate Only：填写 Name、Age 后 Submit 启用；键盘删除 Name 后禁用。\\n- Watch Hooks：中英文和数字输入后，显示值同步更新。\\n\\n待补测范围：\\n- 动态表单项的新增、删除及嵌套输入。\\n- 日期、时间、数字、下拉等控件的输入与校验。\\n- 禁用状态、弹窗表单、字段依赖及错误定位。\\n\\n验收标准：记录各场景的操作步骤、预期与实际结果；如发现异常，附复现步骤。当前第一轮未发现组件功能异常，不代表整页已全部覆盖。',{format:'text'}); await linear.click(131); await linear.getAXState();",
+        "title": "填写测试范围并核对负责人"
+      },
+      "result": "title typed; body pasted; AX diff of New chat composer.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 300,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 37,
+      "n_in_session": 23,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "确认指派给 dongdong",
+      "code": "await linear.click(257); await linear.getAXState();",
+      "apis": [
+        "app.click",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_HyEN1RdCCBRdydrhBX6McuJu",
+      "item_id": "fc_05a61cc4349bad21016aa2812519e887d09ecac032dbcbb828",
+      "ts": "2026-09-10T10:06:30.323Z",
+      "ts_added": "2026-09-10T10:06:29.035Z",
+      "args": {
+        "code": "await linear.click(257); await linear.getAXState();",
+        "title": "确认指派给 dongdong"
+      },
+      "result": "assignee click 257; AX diff.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 25,
+        "args_match_deltas": true,
+        "output_index": 1
+      }
+    },
+    {
+      "n": 38,
+      "n_in_session": 24,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "修正并验证 issue 文本",
+      "code": "await linear.setValue(128,'补充 Ant Design Form 组件交互测试'); await linear.setValue(130,'测试页面：https://ant.design/components/form\\n\\n已测：基础表单空提交校验、中英文输入后成功回调、Remember me 切换、自动填充、下拉联动、Reset、提交按钮启用条件、Watch Hooks 实时更新。第一轮未发现功能异常。\\n\\n待补测：动态表单项增删及嵌套输入；日期、时间、数字及下拉控件；禁用状态；弹窗表单；字段依赖与错误定位。\\n\\n验收：记录操作步骤、预期与实际结果，异常附复现步骤。'); await linear.getAXState();",
+      "apis": [
+        "app.setValue",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linear.setValue",
+        "linear.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_L5WAgfsqif9hAaczRsv4V7gv",
+      "item_id": "fc_05a61cc4349bad21016aa2812b26c887d0bcf4be580012b3ba",
+      "ts": "2026-09-10T10:06:40.698Z",
+      "ts_added": "2026-09-10T10:06:35.080Z",
+      "args": {
+        "code": "await linear.setValue(128,'补充 Ant Design Form 组件交互测试'); await linear.setValue(130,'测试页面：https://ant.design/components/form\\n\\n已测：基础表单空提交校验、中英文输入后成功回调、Remember me 切换、自动填充、下拉联动、Reset、提交按钮启用条件、Watch Hooks 实时更新。第一轮未发现功能异常。\\n\\n待补测：动态表单项增删及嵌套输入；日期、时间、数字及下拉控件；禁用状态；弹窗表单；字段依赖与错误定位。\\n\\n验收：记录操作步骤、预期与实际结果，异常附复现步骤。'); await linear.getAXState();",
+        "title": "修正并验证 issue 文本"
+      },
+      "result": "setValue title+body rewrite; AX diff.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 180,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    },
+    {
+      "n": 39,
+      "n_in_session": 25,
+      "session": "task-2-linear-issue",
+      "capture": "0223_WS_backend-api_codex_responses",
+      "tool": "js",
+      "title": "提交创建已指派的 issue",
+      "code": "await linear.click(143); await linear.getAXState();",
+      "apis": [
+        "app.click",
+        "app.getAXState"
+      ],
+      "observed_apis": [
+        "linear.click",
+        "linear.getAXState"
+      ],
+      "surface": "native",
+      "primary": true,
+      "call_id": "call_6EEHYZP9REsbAOblfm0sQqhi",
+      "item_id": "fc_05a61cc4349bad21016aa28134280487d0913c0e9da13c6287",
+      "ts": "2026-09-10T10:06:45.251Z",
+      "ts_added": "2026-09-10T10:06:44.396Z",
+      "args": {
+        "code": "await linear.click(143); await linear.getAXState();",
+        "title": "提交创建已指派的 issue"
+      },
+      "result": "submit click 143; later assistant reports YOU-25626 created and assigned to DongDong.",
+      "protocol": {
+        "has_output_item_added": true,
+        "has_output_item_done": true,
+        "has_args_done": true,
+        "n_arg_deltas": 26,
+        "args_match_deltas": true,
+        "output_index": 0
+      }
+    }
+  ]
+}

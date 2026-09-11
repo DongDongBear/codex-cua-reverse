@@ -1,0 +1,11 @@
+Copied from this machine's ChatGPT.app (not the public openai/codex GitHub repo).
+
+App: /Applications/ChatGPT.app
+Packages:
+  @oai/cua 0.2.4
+  @oai/sky 0.6.26
+  @oai/browser-desktop 0.1.1
+Plugin unified-computer-use version: 26.903.61454
+Plugin computer-use version: 1.0.1000968
+
+These files are proprietary OpenAI code bundled in the local app.

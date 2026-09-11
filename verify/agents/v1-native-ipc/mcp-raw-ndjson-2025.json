@@ -1,0 +1,8 @@
+{
+  "name": "ndjson-2025",
+  "pid": 43888,
+  "stdout_bytes": 228,
+  "stderr_bytes": 0,
+  "stdout_text": "{\"id\":1,\"jsonrpc\":\"2.0\",\"result\":{\"capabilities\":{\"tools\":{\"listChanged\":false}},\"protocolVersion\":\"2025-03-26\",\"serverInfo\":{\"name\":\"Computer Use\",\"version\":\"14e7d17f1f59e77ca541a15071e980628cd08977a4dda111c96e0564d337056b\"}}}\n",
+  "stderr_text": ""
+}

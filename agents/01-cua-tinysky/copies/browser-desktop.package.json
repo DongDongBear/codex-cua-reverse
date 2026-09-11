@@ -1,0 +1,13 @@
+{
+  "name": "@oai/browser-desktop",
+  "version": "0.1.1",
+  "description": "Production browser runtime for Codex Desktop.",
+  "type": "module",
+  "exports": {
+    ".": "./scripts/browser-client.mjs",
+    "./service": "./scripts/browser-service.mjs"
+  },
+  "dependencies": {
+    "classic-level": "3.0.0"
+  }
+}

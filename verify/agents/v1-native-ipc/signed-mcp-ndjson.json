@@ -1,0 +1,201 @@
+{
+  "ts": "2026-09-10T11:05:10Z",
+  "client": "/Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+  "clientExists": true,
+  "childPid": 45197,
+  "framing": "ndjson",
+  "stderr": "",
+  "lsof": "SkyComput 45197 dongdong  txt    REG               1,17 14167776           144720152 /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient\n",
+  "checks": [
+    {
+      "name": "initialize",
+      "ok": true,
+      "ms": 232,
+      "detail": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+          "capabilities": {
+            "tools": {
+              "listChanged": false
+            }
+          },
+          "protocolVersion": "2024-11-05",
+          "serverInfo": {
+            "name": "Computer Use",
+            "version": "14e7d17f1f59e77ca541a15071e980628cd08977a4dda111c96e0564d337056b"
+          }
+        }
+      }
+    },
+    {
+      "name": "tools/list",
+      "ok": true,
+      "ms": 25,
+      "detail": {
+        "response_keys": [
+          "id",
+          "jsonrpc",
+          "result"
+        ],
+        "result_keys": [
+          "tools"
+        ],
+        "count": 10,
+        "names": [
+          "list_apps",
+          "get_app_state",
+          "click",
+          "perform_secondary_action",
+          "set_value",
+          "select_text",
+          "scroll",
+          "drag",
+          "press_key",
+          "type_text"
+        ],
+        "schemas": [
+          {
+            "name": "list_apps",
+            "required": [],
+            "keys": []
+          },
+          {
+            "name": "get_app_state",
+            "required": [
+              "app"
+            ],
+            "keys": [
+              "app"
+            ]
+          },
+          {
+            "name": "click",
+            "required": [
+              "app"
+            ],
+            "keys": [
+              "app",
+              "click_count",
+              "element_index",
+              "mouse_button",
+              "x",
+              "y"
+            ]
+          },
+          {
+            "name": "perform_secondary_action",
+            "required": [
+              "app",
+              "element_index",
+              "action"
+            ],
+            "keys": [
+              "action",
+              "app",
+              "element_index"
+            ]
+          },
+          {
+            "name": "set_value",
+            "required": [
+              "app",
+              "element_index",
+              "value"
+            ],
+            "keys": [
+              "app",
+              "element_index",
+              "value"
+            ]
+          },
+          {
+            "name": "select_text",
+            "required": [
+              "app",
+              "element_index",
+              "text"
+            ],
+            "keys": [
+              "app",
+              "element_index",
+              "prefix",
+              "selection",
+              "suffix",
+              "text"
+            ]
+          },
+          {
+            "name": "scroll",
+            "required": [
+              "app",
+              "element_index",
+              "direction"
+            ],
+            "keys": [
+              "app",
+              "direction",
+              "element_index",
+              "pages"
+            ]
+          },
+          {
+            "name": "drag",
+            "required": [
+              "app",
+              "from_x",
+              "from_y",
+              "to_x",
+              "to_y"
+            ],
+            "keys": [
+              "app",
+              "from_x",
+              "from_y",
+              "to_x",
+              "to_y"
+            ]
+          },
+          {
+            "name": "press_key",
+            "required": [
+              "app",
+              "key"
+            ],
+            "keys": [
+              "app",
+              "key"
+            ]
+          },
+          {
+            "name": "type_text",
+            "required": [
+              "app",
+              "text"
+            ],
+            "keys": [
+              "app",
+              "text"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "tools/call:list_apps",
+      "ok": false,
+      "ms": 25021,
+      "error": "id=3 timeout; pending=[]",
+      "rpc": null
+    },
+    {
+      "name": "tools/call:get_app_state:Finder",
+      "ok": false,
+      "ms": 25008,
+      "error": "id=4 timeout; pending=[]",
+      "rpc": null
+    }
+  ],
+  "passed": 2,
+  "failed": 2
+}

@@ -1,0 +1,22 @@
+{
+  "ts": "2026-09-10T10:57:56.269Z",
+  "client": "/Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+  "clientExists": true,
+  "stderr": "",
+  "checks": [
+    {
+      "name": "initialize",
+      "ok": false,
+      "error": "initialize timed out",
+      "rpc": null
+    },
+    {
+      "name": "tools/list",
+      "ok": false,
+      "error": "tools/list timed out",
+      "rpc": null
+    }
+  ],
+  "passed": 0,
+  "failed": 2
+}

@@ -1,0 +1,896 @@
+{
+  "ts": "2026-09-10T11:08:16.754Z",
+  "goal": "Live-verify SkyComputerUseClient mcp over NDJSON JSON-RPC; map tools; document SenderAuthorization.",
+  "safety": {
+    "mutatingToolsInvoked": false,
+    "linearMutations": false,
+    "screenshotBytesWritten": false,
+    "axTextTruncated": true
+  },
+  "identity": {
+    "ts": "2026-09-10T11:07:22.965Z",
+    "sock": "/Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/IPC/computeruse.sock",
+    "sockExists": true,
+    "servicePid": "3802",
+    "client": {
+      "path": "/Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+      "exists": true,
+      "identifier": "com.openai.sky.CUAService.cli",
+      "team": "2DC432GLL2",
+      "authority": [
+        "Developer ID Application: OpenAI OpCo, LLC (2DC432GLL2)",
+        "Developer ID Certification Authority",
+        "Apple Root CA"
+      ],
+      "format": "app bundle with Mach-O thin (arm64)",
+      "runtime": "26.1.0",
+      "timestamp": "Sep 2, 2026 at 17:53:47"
+    },
+    "fnmNode": {
+      "path": "/Users/dongdong/.local/share/fnm/node-versions/v24.15.0/installation/bin/node",
+      "exists": true,
+      "identifier": "node",
+      "team": "HX7739G8FX",
+      "authority": [
+        "Developer ID Application: Node.js Foundation (HX7739G8FX)",
+        "Developer ID Certification Authority",
+        "Apple Root CA"
+      ],
+      "format": "Mach-O thin (arm64)",
+      "runtime": "15.0.0",
+      "timestamp": "Apr 14, 2026 at 21:45:42"
+    },
+    "cuaNode": {
+      "path": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node",
+      "exists": true,
+      "identifier": "node",
+      "team": "2DC432GLL2",
+      "authority": [
+        "Developer ID Application: OpenAI OpCo, LLC (2DC432GLL2)",
+        "Developer ID Certification Authority",
+        "Apple Root CA"
+      ],
+      "format": "Mach-O thin (arm64)",
+      "runtime": "15.0.0",
+      "timestamp": "Sep 8, 2026 at 19:30:35"
+    },
+    "nodeRepl": {
+      "path": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl",
+      "exists": true,
+      "identifier": "node_repl",
+      "team": "2DC432GLL2",
+      "authority": [
+        "Developer ID Application: OpenAI OpCo, LLC (2DC432GLL2)",
+        "Developer ID Certification Authority",
+        "Apple Root CA"
+      ],
+      "format": "Mach-O thin (arm64)",
+      "runtime": "11.3.0",
+      "timestamp": "Sep 8, 2026 at 19:30:36"
+    },
+    "cuaServiceApp": {
+      "path": "/Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService",
+      "exists": true,
+      "identifier": "com.openai.sky.CUAService",
+      "team": "2DC432GLL2",
+      "authority": [
+        "Developer ID Application: OpenAI OpCo, LLC (2DC432GLL2)",
+        "Developer ID Certification Authority",
+        "Apple Root CA"
+      ],
+      "format": "app bundle with Mach-O thin (arm64)",
+      "runtime": "26.1.0",
+      "timestamp": "Sep 2, 2026 at 17:53:50"
+    },
+    "codesignNote": "codesign -dv writes to stderr; patched after live run"
+  },
+  "pings": [
+    {
+      "label": "fnm-node-HX7739G8FX",
+      "nodePath": "/Users/dongdong/.local/share/fnm/node-versions/v24.15.0/installation/bin/node",
+      "codesign": {
+        "path": "/Users/dongdong/.local/share/fnm/node-versions/v24.15.0/installation/bin/node",
+        "exists": true,
+        "identifier": "node",
+        "team": "HX7739G8FX",
+        "authority": [
+          "Developer ID Application: Node.js Foundation (HX7739G8FX)",
+          "Developer ID Certification Authority",
+          "Apple Root CA"
+        ],
+        "format": "Mach-O thin (arm64)",
+        "runtime": "15.0.0",
+        "timestamp": "Apr 14, 2026 at 21:45:42"
+      },
+      "ms": 59,
+      "events": [
+        {
+          "t": 2,
+          "e": "connect"
+        },
+        {
+          "t": 2,
+          "e": "write"
+        }
+      ],
+      "ok": false,
+      "error": "socket closed",
+      "hadError": false,
+      "bytes": 0,
+      "headHex": ""
+    },
+    {
+      "label": "cua_node-OpenAI-2DC432GLL2-identifier-node",
+      "nodePath": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node",
+      "codesign": {
+        "path": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node",
+        "exists": true,
+        "identifier": "node",
+        "team": "2DC432GLL2",
+        "authority": [
+          "Developer ID Application: OpenAI OpCo, LLC (2DC432GLL2)",
+          "Developer ID Certification Authority",
+          "Apple Root CA"
+        ],
+        "format": "Mach-O thin (arm64)",
+        "runtime": "15.0.0",
+        "timestamp": "Sep 8, 2026 at 19:30:35"
+      },
+      "ok": false,
+      "error": "socket closed",
+      "hadError": false,
+      "bytes": 0,
+      "headHex": "",
+      "ms": 32,
+      "events": [
+        {
+          "t": 1,
+          "e": "connect"
+        },
+        {
+          "t": 2,
+          "e": "write",
+          "bytes": 98
+        },
+        {
+          "t": 32,
+          "e": "close",
+          "hadError": false,
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "name": "ndjson",
+      "framing": "ndjson-starts-with-brace",
+      "stdoutHeadHex": "7b226964223a312c226a736f6e727063223a22322e30222c22726573756c74223a7b226361706162696c6974696573223a7b22746f6f6c73223a7b226c6973744368616e676564223a66616c73657d7d",
+      "stdoutHeadUtf8": "{\"id\":1,\"jsonrpc\":\"2.0\",\"result\":{\"capabilities\":{\"tools\":{\"listChanged\":false}},\"protocolVersion\":\"2024-11-05\",\"serverInfo\":{\"name\":\"Computer Use\",\"version\":\"14e7d17f1f59e77ca541a",
+      "stdoutBytes": 7028,
+      "parseEvents": [
+        {
+          "via": "ndjson",
+          "id": 1,
+          "method": null,
+          "hasResult": true,
+          "hasError": false
+        },
+        {
+          "via": "ndjson",
+          "id": 2,
+          "method": null,
+          "hasResult": true,
+          "hasError": false
+        },
+        {
+          "via": "ndjson",
+          "id": 3,
+          "method": null,
+          "hasResult": true,
+          "hasError": false
+        }
+      ],
+      "passed": 4,
+      "failed": 1,
+      "checks": [
+        {
+          "name": "initialize",
+          "ok": true,
+          "error": null,
+          "rpc": null,
+          "detail": {
+            "capabilities": {
+              "tools": {
+                "listChanged": false
+              }
+            },
+            "protocolVersion": "2024-11-05",
+            "serverInfo": {
+              "name": "Computer Use",
+              "version": "14e7d17f1f59e77ca541a15071e980628cd08977a4dda111c96e0564d337056b"
+            }
+          }
+        },
+        {
+          "name": "tools/list",
+          "ok": true,
+          "error": null,
+          "rpc": null,
+          "detail": {
+            "count": 10,
+            "names": [
+              "list_apps",
+              "get_app_state",
+              "click",
+              "perform_secondary_action",
+              "set_value",
+              "select_text",
+              "scroll",
+              "drag",
+              "press_key",
+              "type_text"
+            ],
+            "tools": [
+              {
+                "name": "list_apps",
+                "description": "List the apps on this computer. Returns the set of apps that are currently running, as well as any that have been used in the last 14 days, including details on usage frequency",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {},
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": true,
+                  "openWorldHint": false,
+                  "readOnlyHint": true
+                }
+              },
+              {
+                "name": "get_app_state",
+                "description": "Start an app use session if needed, then get the state of the app's key window and return a screenshot and accessibility tree. This must be called once per assistant turn before interacting with the app",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "app"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": true,
+                  "openWorldHint": false,
+                  "readOnlyHint": true
+                }
+              },
+              {
+                "name": "click",
+                "description": "Click an element by index or pixel coordinates from screenshot",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    },
+                    "click_count": {
+                      "description": "Number of clicks. Defaults to 1",
+                      "type": "integer"
+                    },
+                    "element_index": {
+                      "description": "Element index to click",
+                      "type": "string"
+                    },
+                    "mouse_button": {
+                      "description": "Mouse button to click. Defaults to left.",
+                      "enum": [
+                        "left",
+                        "right",
+                        "middle"
+                      ],
+                      "type": "string"
+                    },
+                    "x": {
+                      "description": "X coordinate in screenshot pixel coordinates",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Y coordinate in screenshot pixel coordinates",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "app"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              },
+              {
+                "name": "perform_secondary_action",
+                "description": "Invoke a secondary accessibility action exposed by an element",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "action": {
+                      "description": "Secondary accessibility action name",
+                      "type": "string"
+                    },
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    },
+                    "element_index": {
+                      "description": "Element identifier",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "app",
+                    "element_index",
+                    "action"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              },
+              {
+                "name": "set_value",
+                "description": "Set the value of a settable accessibility element",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    },
+                    "element_index": {
+                      "description": "Element identifier",
+                      "type": "string"
+                    },
+                    "value": {
+                      "description": "Value to assign",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "app",
+                    "element_index",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              },
+              {
+                "name": "select_text",
+                "description": "Select text inside a text element, or place the text cursor before or after it. Provide text exactly as it appears in the accessibility tree, including any Markdown formatting. If the text is not unique, provide surrounding prefix or suffix text to disambiguate it.",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name or bundle identifier",
+                      "type": "string"
+                    },
+                    "element_index": {
+                      "description": "Text element identifier",
+                      "type": "string"
+                    },
+                    "prefix": {
+                      "description": "Optional text immediately before the target, used to disambiguate repeated matches",
+                      "type": "string"
+                    },
+                    "selection": {
+                      "description": "Whether to select the text or place the cursor before or after it. Defaults to text.",
+                      "enum": [
+                        "text",
+                        "cursor_before",
+                        "cursor_after"
+                      ],
+                      "type": "string"
+                    },
+                    "suffix": {
+                      "description": "Optional text immediately after the target, used to disambiguate repeated matches",
+                      "type": "string"
+                    },
+                    "text": {
+                      "description": "Target text as shown in the accessibility tree",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "app",
+                    "element_index",
+                    "text"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              },
+              {
+                "name": "scroll",
+                "description": "Scroll an element in a direction by a number of pages",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    },
+                    "direction": {
+                      "description": "Scroll direction: up, down, left, or right",
+                      "type": "string"
+                    },
+                    "element_index": {
+                      "description": "Element identifier",
+                      "type": "string"
+                    },
+                    "pages": {
+                      "description": "Number of pages to scroll. Fractional values are supported. Defaults to 1",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "app",
+                    "element_index",
+                    "direction"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              },
+              {
+                "name": "drag",
+                "description": "Drag from one point to another using pixel coordinates",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    },
+                    "from_x": {
+                      "description": "Start X coordinate",
+                      "type": "number"
+                    },
+                    "from_y": {
+                      "description": "Start Y coordinate",
+                      "type": "number"
+                    },
+                    "to_x": {
+                      "description": "End X coordinate",
+                      "type": "number"
+                    },
+                    "to_y": {
+                      "description": "End Y coordinate",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "app",
+                    "from_x",
+                    "from_y",
+                    "to_x",
+                    "to_y"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              },
+              {
+                "name": "press_key",
+                "description": "Press a key or key-combination on the keyboard, including modifier and navigation keys.\n  - This supports xdotool's `key` syntax.\n  - Examples: \"a\", \"Return\", \"Tab\", \"super+c\", \"Up\", \"KP_0\" (for the numpad 0 key).",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    },
+                    "key": {
+                      "description": "Key or key combination to press",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "app",
+                    "key"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              },
+              {
+                "name": "type_text",
+                "description": "Type literal text using keyboard input",
+                "inputSchema": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "app": {
+                      "description": "App name, full app path, or unambiguous bundle identifier",
+                      "type": "string"
+                    },
+                    "text": {
+                      "description": "Literal text to type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "app",
+                    "text"
+                  ],
+                  "type": "object"
+                },
+                "annotations": {
+                  "destructiveHint": false,
+                  "idempotentHint": false,
+                  "openWorldHint": false,
+                  "readOnlyHint": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "tools/call:list_apps",
+          "ok": true,
+          "error": null,
+          "rpc": null,
+          "detail": {
+            "sanitized": {
+              "_meta": {
+                "codex/telemetry": {
+                  "span": {
+                    "did_trigger_server_user_flow": false
+                  }
+                }
+              },
+              "content": [
+                {
+                  "text": "Computer Use server error -10000: Sender process is not authenticated",
+                  "type": "text"
+                }
+              ],
+              "isError": true
+            },
+            "summary": {
+              "isError": true,
+              "errorText": "Computer Use server error -10000: Sender process is not authenticated",
+              "listedCount": 0,
+              "sample": [],
+              "finder": null,
+              "linear": null,
+              "textHead": "Computer Use server error -10000: Sender process is not authenticated",
+              "rawChars": 199
+            }
+          }
+        },
+        {
+          "name": "tools/call:get_app_state:Finder",
+          "ok": false,
+          "error": "tools/call timed out after 45000ms",
+          "rpc": null
+        },
+        {
+          "name": "safety:skipped-mutating-tools",
+          "ok": true,
+          "error": null,
+          "rpc": null,
+          "detail": {
+            "skipped": [
+              "click",
+              "perform_secondary_action",
+              "set_value",
+              "select_text",
+              "scroll",
+              "drag",
+              "press_key",
+              "type_text"
+            ],
+            "note": "never invoked click/type/paste/set_value/press_key/scroll/drag/select_text/perform_secondary_action"
+          }
+        }
+      ],
+      "lsofSnapshots": [
+        {
+          "tag": "after-initialize",
+          "pid": 49944,
+          "ps": "49944 49819 dongdong /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+          "parent": "49819 49815 dongdong node",
+          "lsof": [
+            "SkyComput 49944 dongdong  txt    REG               1,17 14167776           144720152 /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+            "SkyComput 49944 dongdong    0u  unix 0x239812d873384e7e      0t0                     ->0xc26d4cbe44ef21cb",
+            "SkyComput 49944 dongdong    1u  unix 0x1b7f2ae715529f03      0t0                     ->0xd9417bf990cdb935",
+            "SkyComput 49944 dongdong    2u  unix 0xd4130a8ca56152be      0t0                     ->0xe8146be546fd9275",
+            "SkyComput 49944 dongdong    3u   REG               1,17    98304              162194 /Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/Library/Application Support/Software/Analytics.db"
+          ]
+        },
+        {
+          "tag": "after-list_apps",
+          "pid": 49944,
+          "ps": "49944 49819 dongdong /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+          "parent": "49819 49815 dongdong node",
+          "lsof": [
+            "SkyComput 49944 dongdong  txt    REG               1,17 14167776           144720152 /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+            "SkyComput 49944 dongdong    0u  unix 0x239812d873384e7e      0t0                     ->0xc26d4cbe44ef21cb",
+            "SkyComput 49944 dongdong    1u  unix 0x1b7f2ae715529f03      0t0                     ->0xd9417bf990cdb935",
+            "SkyComput 49944 dongdong    2u  unix 0xd4130a8ca56152be      0t0                     ->0xe8146be546fd9275",
+            "SkyComput 49944 dongdong    3u   REG               1,17    98304              162194 /Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/Library/Application Support/Software/Analytics.db",
+            "SkyComput 49944 dongdong    4u  unix 0x8a5d87db3afdeda3      0t0                     ->0x27e8fcd7a282e5da"
+          ]
+        }
+      ],
+      "stderr": "",
+      "pid": 49944,
+      "parentPid": 49819,
+      "parentExec": "/Users/dongdong/.local/share/fnm/node-versions/v24.15.0/installation/bin/node"
+    },
+    {
+      "name": "content-length-control",
+      "framing": "ndjson-starts-with-brace",
+      "stdoutHeadHex": "7b226572726f72223a7b22636f6465223a2d33323730302c2264617461223a7b2264657461696c223a22496e76616c6964206d65737361676520666f726d6174227d2c226d657373616765223a225061",
+      "stdoutHeadUtf8": "{\"error\":{\"code\":-32700,\"data\":{\"detail\":\"Invalid message format\"},\"message\":\"Parse error: Invalid JSON: Invalid message format\"},\"id\":\"780AADAA-BCAC-434D-94B9-8BDF42EF20A7\",\"jsonr",
+      "stdoutBytes": 1146,
+      "parseEvents": [
+        {
+          "via": "ndjson",
+          "id": "780AADAA-BCAC-434D-94B9-8BDF42EF20A7",
+          "method": null,
+          "hasResult": false,
+          "hasError": true
+        },
+        {
+          "via": "ndjson",
+          "id": "F33A956F-CBF8-4A51-BDE9-691FD7844121",
+          "method": null,
+          "hasResult": false,
+          "hasError": true
+        },
+        {
+          "via": "ndjson",
+          "id": "0E1503F3-81C5-4ACA-94AE-8F6E2735A771",
+          "method": null,
+          "hasResult": false,
+          "hasError": true
+        },
+        {
+          "via": "ndjson",
+          "id": "FB3701DD-9115-4DFB-B6E3-2005643A931F",
+          "method": null,
+          "hasResult": false,
+          "hasError": true
+        },
+        {
+          "via": "ndjson",
+          "id": "9883CF42-8C97-4D49-8B69-36C05B3715F2",
+          "method": null,
+          "hasResult": false,
+          "hasError": true
+        },
+        {
+          "via": "ndjson",
+          "id": "9C73FC8D-2A7B-43C5-9800-D3FCA87FDA0B",
+          "method": null,
+          "hasResult": false,
+          "hasError": true
+        }
+      ],
+      "passed": 0,
+      "failed": 2,
+      "checks": [
+        {
+          "name": "initialize",
+          "ok": false,
+          "error": "initialize timed out after 4000ms",
+          "rpc": null
+        },
+        {
+          "name": "tools/list",
+          "ok": false,
+          "error": "tools/list timed out after 4000ms",
+          "rpc": null
+        }
+      ],
+      "lsofSnapshots": [
+        {
+          "tag": "after-initialize",
+          "pid": 51247,
+          "ps": "51247 49819 dongdong /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+          "parent": "49819 49815 dongdong node",
+          "lsof": [
+            "SkyComput 51247 dongdong  txt    REG               1,17 14167776           144720152 /Users/dongdong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+            "SkyComput 51247 dongdong    0u  unix 0x239812d873384e7e      0t0                     ->0xc26d4cbe44ef21cb",
+            "SkyComput 51247 dongdong    1u  unix 0x71258b7989ba9b69      0t0                     ->0xc1da2ea7f89a1d96",
+            "SkyComput 51247 dongdong    2u  unix 0x1b7f2ae715529f03      0t0                     ->0xd9417bf990cdb935",
+            "SkyComput 51247 dongdong    3u   REG               1,17    98304              162194 /Users/dongdong/Library/Group Containers/2DC432GLL2.com.openai.sky.CUAService/Library/Application Support/Software/Analytics.db"
+          ]
+        }
+      ],
+      "stderr": "",
+      "pid": 51247,
+      "parentPid": 49819,
+      "parentExec": "/Users/dongdong/.local/share/fnm/node-versions/v24.15.0/installation/bin/node"
+    }
+  ],
+  "mapping": {
+    "note": "MCP snake_case tools are the plugin/CLI surface. Unified-computer-use REPL uses tinysky `cua.*` \u2192 `@oai/sky` snake_case \u2192 MacComputerUseClient camelCase \u2192 ComputerUseIPC* on CodexComputerUseIPC-5.",
+    "live_mcp_tools_expected": [
+      "list_apps",
+      "get_app_state",
+      "click",
+      "perform_secondary_action",
+      "set_value",
+      "select_text",
+      "scroll",
+      "drag",
+      "press_key",
+      "type_text"
+    ],
+    "rows": [
+      {
+        "mcp": "list_apps",
+        "tinysky": "cua.listApps()",
+        "sky": "sky.list_apps()",
+        "macClient": "MacComputerUseClient.listApps()",
+        "ipc": "ComputerUseIPCListAppsRequest",
+        "ipcResult": "ComputerUseIPCDiscoveredApp[]",
+        "mutating": false
+      },
+      {
+        "mcp": "get_app_state",
+        "tinysky": "cua.getApp(name)  // internally sky.get_app_state({app, disableDiff:true}); App.getAXState/getScreenshot/getAXStateAndScreenshot also call get_app_state",
+        "sky": "sky.get_app_state({ app, disableDiff? })  // implicit session start",
+        "macClient": "startApp + getAppState",
+        "ipc": "ComputerUseIPCAppStartRequest then ComputerUseIPCAppGetSkyshotRequest",
+        "ipcResult": "ComputerUseIPCAppState / ComputerUseIPCSkyshot (AX text + screenshot URL)",
+        "mutating": false,
+        "mcpArg": {
+          "app": "string (required)"
+        }
+      },
+      {
+        "mcp": "click",
+        "tinysky": "app.click(index | [x,y], {mouseButton, clickCount})",
+        "sky": "sky.click({ app, element_index|x,y, mouse_button, click_count })",
+        "macClient": "click \u2192 performAction",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { click: { at: elementID|coordinate, clickCount, mouseButton } } }",
+        "mutating": true
+      },
+      {
+        "mcp": "perform_secondary_action",
+        "tinysky": "app.performSecondaryAction(index, action)",
+        "sky": "sky.perform_secondary_action({ app, element_index, action })",
+        "macClient": "performSecondaryAction",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { performSecondaryAction: { action, elementID } } }",
+        "mutating": true
+      },
+      {
+        "mcp": "set_value",
+        "tinysky": "app.setValue(index, value)",
+        "sky": "sky.set_value({ app, element_index, value })",
+        "macClient": "setValue",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { setValue } }",
+        "mutating": true
+      },
+      {
+        "mcp": "select_text",
+        "tinysky": "app.selectText(index, text, {prefix,suffix,selectionType})",
+        "sky": "sky.select_text({ app, element_index, text, prefix, suffix, selection_type })",
+        "macClient": "selectText",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { selectText } }",
+        "mutating": true
+      },
+      {
+        "mcp": "scroll",
+        "tinysky": "app.scroll(index | [x,y], direction, pages?)",
+        "sky": "sky.scroll({ app, element_index|x,y, direction, pages })",
+        "macClient": "scroll",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { scroll } }",
+        "mutating": true
+      },
+      {
+        "mcp": "drag",
+        "tinysky": "app.drag([x1,y1],[x2,y2])",
+        "sky": "sky.drag({ app, from_x, from_y, to_x, to_y })",
+        "macClient": "drag",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { drag } }",
+        "mutating": true
+      },
+      {
+        "mcp": "press_key",
+        "tinysky": "app.pressKey(key)",
+        "sky": "sky.press_key({ app, key })",
+        "macClient": "pressKey",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { pressKey: { _0: key } } }",
+        "mutating": true
+      },
+      {
+        "mcp": "type_text",
+        "tinysky": "app.typeText(text)",
+        "sky": "sky.type_text({ app, text })",
+        "macClient": "typeText",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { type: { _0: text } } }",
+        "mutating": true
+      }
+    ],
+    "present_in_sky_tinysky_absent_from_mcp": [
+      {
+        "tinysky": "app.paste(text, {format})",
+        "sky": "sky.paste({ app, text, format })",
+        "ipc": "ComputerUseIPCAppPerformActionRequest { action: { paste } }"
+      },
+      {
+        "tinysky": null,
+        "sky": "sky.start_audio_recording / stop_audio_recording (SKY_ENABLE_AUDIO=1)",
+        "ipc": "ComputerUseIPCStartAudioRecordingRequest / ComputerUseIPCStopAudioRecordingRequest"
+      }
+    ],
+    "senderAuthorization": {
+      "type": "ComputerUseIPCSenderAuthorization",
+      "failClosed": "Sender process is not authenticated",
+      "jsonRpcCode": -10000,
+      "jsonRpcName": "senderProcessNotAuthenticated",
+      "analyticsFields": [
+        "parent/responsible team id",
+        "signing id",
+        "bundle id",
+        "executable"
+      ],
+      "failureReasons": [
+        "CODEX_COMPUTER_USE_IPC_AUTHORIZATION_FAILURE_REASON_MISSING_PARENT",
+        "CODEX_COMPUTER_USE_IPC_AUTHORIZATION_FAILURE_REASON_UNTRUSTED_PARENT",
+        "CODEX_COMPUTER_USE_IPC_AUTHORIZATION_FAILURE_REASON_RELAY_WITHOUT_TRUSTED_ANCESTOR"
+      ],
+      "validLivePaths": [
+        "node_repl.nativePipe.createConnection (host-side privileged bridge; NativePipeRequestOp::Connect)",
+        "signed SkyComputerUseClient mcp (com.openai.sky.CUAService.cli) launched under a trusted 2DC432GLL2 parent"
+      ],
+      "invalidLivePaths": [
+        "unsigned / Node.js Foundation node connecting to computeruse.sock",
+        "OpenAI-signed cua_node/bin/node (Identifier=node, Team=2DC432GLL2) connecting to computeruse.sock"
+      ]
+    }
+  }
+}
