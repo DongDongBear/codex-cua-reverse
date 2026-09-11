@@ -1,6 +1,6 @@
 # Codex CUA 逆向（本机 ChatGPT.app）
 
-本机 ChatGPT 桌面 **Computer Use / Browser Use** 的逆向笔记（`js` / `cua` / `@oai/sky` / IAB）。入口就是本文件。没抠出来的：[UNREVERSED.md](UNREVERSED.md)。说明：[NOTICE.md](NOTICE.md)。
+本机 ChatGPT 桌面 **Computer Use / Browser Use** 的逆向笔记（`js` / `cua` / `@oai/sky` / IAB）。入口就是本文件。实现策略：[IMPLEMENTATION.md](IMPLEMENTATION.md)。没抠出来的：[UNREVERSED.md](UNREVERSED.md)。说明：[NOTICE.md](NOTICE.md)。
 
 从本机 ChatGPT 桌面端抽出 **Computer Use + Browser Use** 的全部接口，并用你的抓包验证：
 
@@ -39,6 +39,7 @@ Live：`SkyComputerUseClient mcp`（NDJSON）`tools/list` 是 10 个与 `sky` wi
 | [TRACES.md](TRACES.md) | 两轮任务如何对应 API |
 | [UNREVERSED.md](UNREVERSED.md) | 没还原出来的（Swift / 鉴权 / 黑盒） |
 | [REGRESSION.md](REGRESSION.md) | 1074：Finder 19 步 + 本地页 11 步 |
+| [ALIGN.md](ALIGN.md) | 1161 抓包 × 你列的 12 步 × 逆向（未再开 ChatGPT） |
 | [test-site/](test-site/) | 本地 IAB 测试页 `http://127.0.0.1:8765/` |
 | [DEBUG-LIVE.md](DEBUG-LIVE.md) | 用 `node_repl`+`js` 现场调试 |
 | [LIVE-VERIFICATION.md](LIVE-VERIFICATION.md) | 真调 MCP / socket |

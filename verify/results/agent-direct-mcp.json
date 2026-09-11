@@ -1,0 +1,20 @@
+{
+  "who": "agent-direct SkyComputerUseClient mcp",
+  "init": {
+    "name": "Computer Use",
+    "version": "14e7d17f1f59e77ca541a15071e980628cd08977a4dda111c96e0564d337056b"
+  },
+  "tools": [
+    "list_apps",
+    "get_app_state",
+    "click",
+    "perform_secondary_action",
+    "set_value",
+    "select_text",
+    "scroll",
+    "drag",
+    "press_key",
+    "type_text"
+  ],
+  "list_apps": null
+}

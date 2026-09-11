@@ -1,10 +1,10 @@
 {
-  "ts": "2026-09-11T05:27:27Z",
+  "ts": "2026-09-11T08:26:47Z",
   "steps": [
     {
       "name": "initialize",
       "ok": true,
-      "ms": 149,
+      "ms": 5,
       "mode": "ndjson",
       "text": "",
       "raw": {
@@ -143,7 +143,7 @@
     {
       "name": "js:rpc-sky-setup",
       "ok": true,
-      "ms": 5512,
+      "ms": 5584,
       "mode": "ndjson",
       "text": "## Computer Use\n\nControl native apps and browsers on the user’s computer by reading or operating UI. Prefer purpose-built connectors, APIs, or CLIs when available.\n\n- Use `cua_repl` (JavaScript) for all UI actions.\n- Do not use other technologies besides `cua_repl` for computer interactions, unless specifically requested by the user (e.g. AppleScript, `osascript`, JXA, System Events, CGEvent synthesis).\n- Prefer a dedicated plugin or skill when it can complete the task; use Computer Use for interactions that are not exposed through a more specific interface.\n- `cua_repl` state is persistent across calls\n- If you create a tab or get an app, the initial UI state is automatically included in the tool result.\n\n## API\n\n```typescript\ntype Vec2 = [x: number, y: number];\ntype ObservationOptions = { emit?: boolean };\ntype StateOptions = ObservationOptions & { disableDiffing?: boolean };\ntype StateAndScreenshot = { state: string; screenshot?: Uint8Array };\ntype PasteOptions = { format?: \"text\" | \"md\" | \"html\" };\ntype ClickOptions = { mouseButton?: MouseButton; clickCount?: number };\ntype SelectTextOptions = {\n  prefix?: string;\n  suffix?: string;\n  selectionType?: SelectionType;\n};\ntype Direction = \"up\" | \"down\" | \"left\" | \"right\" | \"u\" | \"d\" | \"l\" | \"r\";\ntype SelectionType = \"text\" | \"cursor_before\" | \"cursor_after\";\ntype MouseButton = \"left\" | \"right\" | \"middle\" | \"l\" | \"r\" | \"m\";\n\ninterface Target {\n  getAXState(options?: StateOptions): Promise<string>;\n  getScreenshot(options?: ObservationOptions): Promise<Uint8Array>;\n  getAXStateAndScreenshot(options?: StateOptions): Promise<StateAndScreenshot>;\n  paste(text: string, options?: PasteOptions): Promise<void>;\n  click(target: number | Vec2, options?: ClickOptions): Promise<void>;\n  drag(from: Vec2, to: Vec2): Promise<void>;\n  pressKey(key: string): Promise<void>;\n  scroll(target: number | Vec2, direction: Direction, pages?: number): Promise<void>;\n  selectText(elementIndex: number, text: string, options?: SelectTextOptions): Promise<void>;\n  setValue(elementIndex: number, value: string): Promise<void>;\n  typeText(text: string): Promise<void>;\n  performSecondaryAction(elementIndex: number, action: string): Promise<void>;\n}\n\ntype AppInfo = {\n  id: string;\n  displayName?: string;\n  lastUsedDate?: string;\n  useCount?: number;\n  isRunning?: boolean;\n};\n\ninterface App extends Target {}\n\ntype BrowserInfo = {\n  id: string;\n  name?: string;\n  family?: string;\n  type?: \"iab\" | \"extension\" | \"cdp\";\n  profileName?: string;\n  metadata?: { extensionInstanceId?: string; codexSessionId?: string };\n};\n\ntype BrowserTabInfo = {\n  id: string;\n  providerTabId?: string;\n  title?: string;\n  url?: string;\n};\n\ninterface Browser {\n  readonly browserId: string;\n  documentation(): Promise<string>;\n}\n\ninterface BrowserProvider {\n  list(): Promise<BrowserInfo[]>;\n  get(id: string): Promise<Browser>;\n}\n\ninterface BrowserState extends BrowserInfo {\n  tabs: BrowserTabInfo[];\n}\n\ntype TabInfo = {\n  id: string;\n  providerTabId?: string;\n  browserId: string;\n  title?: string;\n  url?: string;\n};\n\ntype State = {\n  apps: AppInfo[];\n  browsers: BrowserState[];\n  errors?: string[]; // Inventory failures; the other inventory remains usable.\n};\n\ntype BrowserOptions = { browser?: string };\ntype GetBrowserOptions = { id?: string; url?: string };\ntype CreateBrowserTabOptions = { visible?: boolean; sessionName?: string };\n\ninterface Tab extends Target {\n  readonly id: string;\n  goto(url: string): Promise<void>;\n  back(): Promise<void>;\n  forward(): Promise<void>;\n  reload(): Promise<void>;\n  close(): Promise<void>;\n  markDeliverable(): Promise<void>;\n  markHandoff(): Promise<void>;\n}\n\ndeclare const cua: {\n  getState(options?: ObservationOptions): Promise<State>;\n\n  getApp(app: string): Promise<App>;\n  listApps(options?: ObservationOptions): Promise<AppInfo[]>;\n\n  /** Select without opening a tab. Use the returned browserId with createBrowserTab. */\n  getBrowser(options?: GetBrowserOptions): Promise<Browser>;\n  /** Apply options bef",
       "raw": {
@@ -162,7 +162,7 @@
           ],
           "isError": false,
           "_meta": {
-            "codex/nodeReplExecutionDurationMs": 5427,
+            "codex/nodeReplExecutionDurationMs": 5504,
             "codex/toolSurface": {
               "app": null,
               "kind": "computerUse"
@@ -174,7 +174,7 @@
     {
       "name": "js:probe-nodeRepl",
       "ok": true,
-      "ms": 6,
+      "ms": 4,
       "mode": "ndjson",
       "text": "{\n  \"names\": [\n    \"cwd\",\n    \"env\",\n    \"homeDir\",\n    \"tmpDir\",\n    \"requestMeta\",\n    \"write\",\n    \"emitImage\",\n    \"rpc\"\n  ],\n  \"rpc\": \"function\",\n  \"requestMeta\": {\n    \"x-codex-turn-metadata\": {\n      \"session_id\": \"debug-cua-reverse\",\n      \"turn_id\": \"debug-turn-1\"\n    }\n  }\n}",
       "raw": {
@@ -197,7 +197,7 @@
     {
       "name": "js:listApps",
       "ok": false,
-      "ms": 5418,
+      "ms": 5365,
       "mode": "ndjson",
       "text": "Sky Computer Use native pipe startup failed\nlistApps error: Sky Computer Use native pipe startup failed cause=undefined",
       "raw": {
@@ -216,7 +216,7 @@
           ],
           "isError": true,
           "_meta": {
-            "codex/nodeReplExecutionDurationMs": 5415,
+            "codex/nodeReplExecutionDurationMs": 5361,
             "codex/toolSurface": {
               "app": null,
               "kind": "computerUse"
@@ -228,7 +228,7 @@
     {
       "name": "js:getApp Finder Raise",
       "ok": false,
-      "ms": 5446,
+      "ms": 5404,
       "mode": "ndjson",
       "text": "Sky Computer Use native pipe startup failed",
       "raw": {
@@ -243,7 +243,7 @@
           ],
           "isError": true,
           "_meta": {
-            "codex/nodeReplExecutionDurationMs": 5441,
+            "codex/nodeReplExecutionDurationMs": 5400,
             "codex/toolSurface": {
               "app": null,
               "kind": "computerUse"
@@ -255,7 +255,7 @@
     {
       "name": "js:getBrowser listTabs",
       "ok": false,
-      "ms": 49,
+      "ms": 57,
       "mode": "ndjson",
       "text": "No browser is available",
       "raw": {
@@ -270,7 +270,7 @@
           ],
           "isError": true,
           "_meta": {
-            "codex/nodeReplExecutionDurationMs": 27
+            "codex/nodeReplExecutionDurationMs": 54
           }
         }
       }
@@ -278,7 +278,7 @@
     {
       "name": "js:open visible IAB example.com",
       "ok": false,
-      "ms": 19,
+      "ms": 21,
       "mode": "ndjson",
       "text": "Browser is not available: iab",
       "raw": {
@@ -293,7 +293,7 @@
           ],
           "isError": true,
           "_meta": {
-            "codex/nodeReplExecutionDurationMs": 18
+            "codex/nodeReplExecutionDurationMs": 19
           }
         }
       }
