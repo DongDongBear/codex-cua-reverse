@@ -1,6 +1,6 @@
 # Codex CUA 逆向（本机 ChatGPT.app）
 
-本机 ChatGPT 桌面 **Computer Use / Browser Use** 的逆向笔记（`js` / `cua` / `@oai/sky` / IAB）。入口就是本文件。实现策略：[IMPLEMENTATION.md](IMPLEMENTATION.md)。没抠出来的：[UNREVERSED.md](UNREVERSED.md)。说明：[NOTICE.md](NOTICE.md)。
+本机 ChatGPT 桌面 **Computer Use / Browser Use** 的逆向笔记（`js` / `cua` / `@oai/sky` / IAB）。入口就是本文件。实现策略（含源码路径和未反编译模块的推断）：[IMPLEMENTATION.md](IMPLEMENTATION.md)。没抠出来的清单：[UNREVERSED.md](UNREVERSED.md)。说明：[NOTICE.md](NOTICE.md)。
 
 从本机 ChatGPT 桌面端抽出 **Computer Use + Browser Use** 的全部接口，并用你的抓包验证：
 
